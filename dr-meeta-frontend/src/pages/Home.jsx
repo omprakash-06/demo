@@ -38,10 +38,11 @@ export default function Home() {
             <p className="text-gray-700 leading-relaxed mb-4">
               Dr. Meeta Mishra is a certified Nutritionist (PhD in Nutrition & MSc Food Science) with <strong>17+ years</strong> of experience in clinical, sports, and lifestyle nutrition. She has helped more than <strong>1000+</strong>individuals transform their health through balanced, customized diet plans.
             </p>
-
-            <a href="/about" className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-blue-700 transition m-6">
+            <Link to="/about">
+            <button href="/about" className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-blue-700 transition m-6">
               Know More →
-            </a>
+            </button>
+            </Link>
           </div>
         </div>
       </section>
