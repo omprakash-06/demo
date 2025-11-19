@@ -39,7 +39,7 @@ export default function Navbar() {
           <li className="px-6 py-3 border-b"><Link to="/about" onClick={() => setOpen(false)}>About</Link></li>
           <li className="px-6 py-3 border-b"><Link to="/services" onClick={() => setOpen(false)}>Services</Link></li>
           <li className="px-6 py-3 border-b"><Link to="/training" onClick={() => setOpen(false)}>Training</Link></li>
-          <li className="px-6 py-3 border-b"><Link to="/testimonials" onClick={() => setOpen(false)}>Testimonials</Link></li>
+          <li className="px-6 py-3 border-b"><Link to="/testimonials" onClick={() => setOpen(false)}>Client Story</Link></li>
           <li className="px-6 py-3"><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
         </ul>
       )}
