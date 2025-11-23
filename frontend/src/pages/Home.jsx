@@ -60,19 +60,43 @@ export default function Home() {
        <Hero/>
 
       {/* ABOUT */}
-      <section className="max-w-6xl mx-auto px-6 py-14">
-      <section className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528"
-          alt="Nutrition Banner"
-          className="w-full h-full object-cover brightness-50"
-        />
-        <div className="absolute inset-0 flex items-center justify-center px-6">
-          <h1 className="text-white text-3xl md:text-5xl font-bold tracking-wide text-center drop-shadow-xl">
-            About Dr. Meeta Mishra
-          </h1>
+      
+      {/* PROFESSIONAL JOURNEY */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <h1 className="text-black text-3xl md:text-4xl font-bold text-center mb-16">
+          Professional Journey
+        </h1>
+
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          {/* LEFT IMAGE */}
+          <div className="flex justify-center">
+            <img
+              src="https://imgs.search.brave.com/WCuJHeNCloBh6l5BDPgO7R3H9wiAUyL0oG9zJAmg_4o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2RiL2U4/L2MxL2RiZThjMTQz/ZGExM2EwMWZhMzUx/N2E2ZWUwZTQ3MjNm/LmpwZw"
+              alt="Dr. Meeta"
+              className="rounded-2xl shadow-xl w-80 md:w-96 object-cover ring-4 ring-green-200"
+            />
+          </div>
+
+          {/* RIGHT TEXT */}
+          <div>
+            <h2 className="text-3xl font-bold text-green-800 mb-6 leading-snug">
+              Certified Dietitian & Clinical Nutritionist
+            </h2>
+
+            <p className="text-gray-700 leading-relaxed text-lg">
+              <strong>Dr. Meeta Mishra</strong> is a distinguished certified nutritionist
+              with over <strong>17 years</strong> of experience in
+              <strong> clinical, lifestyle, and sports nutrition</strong>.
+              With an <strong>MSc in Food & Nutrition and a PhD in Nutrition</strong>,
+              she combines scientific expertise with a compassionate, practical approach.
+              <br /><br />
+              She has contributed 8 years to clinical nutrition at Jubesta Hospital and
+              <strong> 8 years</strong> as a sports nutrition consultant at Planet Gym.
+              In 2017, she founded her own clinic at Vidya Protein World, Shankar Nagar,
+              Raipur — now a trusted centre for personalized diet and wellness plans.
+            </p>
+          </div>
         </div>
-      </section>
       </section>
 
       {/* SERVICES */}
