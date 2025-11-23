@@ -64,9 +64,9 @@ exports.loginAdmin = async (req, res) => {
     res
       .cookie("token", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "lax",
-        maxAge: 1 * 24 * 60 * 60 * 1000,
+        secure: true,
+        sameSite: "none",
+        maxAge: 24 * 60 * 60 * 1000,
       })
       .status(200)
       .json({
@@ -97,7 +97,7 @@ exports.getAdminProfile = async (req, res) => {
 
 exports.logoutAdmin = async (req, res) => {
   res
-    .clearCookie("token", { httpOnly: true, sameSite: "lax", secure: false })
+    .clearCookie("token", { httpOnly: true, sameSite: "none", secure: true })
     .status(200)
     .json({ message: "Logout successful" });
 };
