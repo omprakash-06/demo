@@ -6,7 +6,7 @@ const {
   createTraining,
   updateTraining,
   deleteTraining,
-} = require("../controllers/TrainingController");
+} = require("../controllers/trainingController");
 const { verifyAdmin } = require("../middleware/verifyAdmin");
 
 const router = express.Router();
