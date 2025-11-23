@@ -49,7 +49,7 @@ export default function Testimonials() {
             src={item.img || "https://via.placeholder.com/300"}
             alt={item.title}
             onClick={() => setSelected(item)}
-            className="w-full h-80 object-cover rounded-xl cursor-pointer hover:opacity-90 transition"
+            className="w-full h-full object-cover rounded-xl cursor-pointer hover:opacity-90 transition "
           />
         ))}
       </div>

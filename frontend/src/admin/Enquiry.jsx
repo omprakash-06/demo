@@ -8,7 +8,7 @@ export default function EnquiriesPage() {
   useEffect(() => {
     const fetchEnquiries = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/enquiry/all`);
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/enquiry/all`,{credentials: "include"});
         const data = await res.json();
         if (res.ok) setEnquiries(data.enquiries);
         setLoading(false);

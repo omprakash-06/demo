@@ -8,11 +8,13 @@ const {
   deleteService,
 } = require("../controllers/ServiceController");
 
+const { verifyAdmin } = require("../middleware/verifyAdmin");
+
 const router = express.Router();
 
 router.get("/all", allServices);
-router.post("/create", upload.single("image"), createService);
-router.put("/update/:id", upload.single("image"), updateService);
-router.delete("/delete/:id", deleteService);
+router.post("/create", verifyAdmin,upload.single("image"), createService);
+router.put("/update/:id",verifyAdmin, upload.single("image"), updateService);
+router.delete("/delete/:id",verifyAdmin, deleteService);
 
 module.exports = router;

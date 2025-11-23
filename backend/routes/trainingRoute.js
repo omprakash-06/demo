@@ -7,6 +7,7 @@ const {
   updateTraining,
   deleteTraining,
 } = require("../controllers/TrainingController");
+const { verifyAdmin } = require("../middleware/verifyAdmin");
 
 const router = express.Router();
 
@@ -14,8 +15,8 @@ const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
 router.get("/all", allTraining);
-router.post("/create", upload.single("image"), createTraining);
-router.put("/update/:id", upload.single("image"), updateTraining);
-router.delete("/delete/:id", deleteTraining);
+router.post("/create", verifyAdmin , upload.single("image"), createTraining);
+router.put("/update/:id", verifyAdmin, upload.single("image"), updateTraining);
+router.delete("/delete/:id", verifyAdmin, deleteTraining);
 
 module.exports = router;

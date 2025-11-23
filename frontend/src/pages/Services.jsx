@@ -46,7 +46,7 @@ function Services() {
                       services.map((service) => (
                       <ServiceCard
                       key={service._id}
-                      img={service.image || "https://via.placeholder.com/300"}
+                      img={service.image || "https://via.placeholder.com/300"} 
                       title={service.title}
                       desc={service.description}
                       

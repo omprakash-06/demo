@@ -32,18 +32,8 @@ exports.registerAdmin = async (req, res) => {
       password: hashedPassword,
     });
 
-    // Generate token
-    const token = generateToken(admin);
-
     // Set Cookie
-    res
-      .cookie("token", token, {
-        httpOnly: true,
-        secure: false,
-        sameSite: "lax",
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-      })
-      .status(201)
+    res.status(201)
       .json({
         message: "Admin created successfully",
         admin: { id: admin._id, fullname: admin.fullname, email: admin.email },
@@ -76,7 +66,7 @@ exports.loginAdmin = async (req, res) => {
         httpOnly: true,
         secure: false,
         sameSite: "lax",
-        maxAge: 7 * 24 * 60 * 60 * 1000,
+        maxAge: 1 * 24 * 60 * 60 * 1000,
       })
       .status(200)
       .json({

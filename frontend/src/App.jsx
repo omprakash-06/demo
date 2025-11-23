@@ -17,9 +17,9 @@ import AdminLogin from "./admin/AdminLogin";
 import AdminLayout from "./admin/AdminLayout";
 import Dashboard from "./admin/Dashboard";
 import Enquiry from "./admin/Enquiry";
-import ServicesAdmin from "./admin/ServicesAdmin";
-import TrainingAdmin from "./admin/TrainingAdmin";
-import TestimonialsAdmin from "./admin/TestimonialsAdmin";
+import ServicesAdmin from "./admin/Services/ServicesAdmin";
+import TrainingAdmin from "./admin/Trainings/TrainingAdmin";
+import TestimonialsAdmin from "./admin/AdminTestimonial";
 
 /* PROTECTED ROUTE */
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -55,7 +55,7 @@ export default function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="enquiries" element={<Enquiry />} />
           <Route path="services" element={<ServicesAdmin />} />
-          <Route path="training" element={<TrainingAdmin />} />
+          <Route path="trainings" element={<TrainingAdmin />} />
           <Route path="testimonials" element={<TestimonialsAdmin />} />
         </Route>
 
