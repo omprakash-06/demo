@@ -57,11 +57,11 @@ export default function Home() {
   return (
     <div className="w-full bg-[#f5f9f5]">
       {/* HERO */}
-      <Hero />
+      
 
       {/* ABOUT */}
       <section className="max-w-6xl mx-auto px-6 py-14">
-        {/* ... your existing About section ... */}
+        <Hero/>
       </section>
 
       {/* SERVICES */}
