@@ -57,11 +57,22 @@ export default function Home() {
   return (
     <div className="w-full bg-[#f5f9f5]">
       {/* HERO */}
-      
+       <Hero/>
 
       {/* ABOUT */}
       <section className="max-w-6xl mx-auto px-6 py-14">
-        <Hero/>
+      <section className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528"
+          alt="Nutrition Banner"
+          className="w-full h-full object-cover brightness-50"
+        />
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <h1 className="text-white text-3xl md:text-5xl font-bold tracking-wide text-center drop-shadow-xl">
+            About Dr. Meeta Mishra
+          </h1>
+        </div>
+      </section>
       </section>
 
       {/* SERVICES */}
