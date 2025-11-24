@@ -41,7 +41,7 @@ export default function Footer() {
               <i className="fa-solid fa-phone"></i> +91 9589345938 or +91 8982627838
             </p>
             <p className="text-sm text-gray-900 mb-1">
-              <i className="fa-solid fa-envelope"></i> info@drmeetamishra.com
+              <i className="fa-solid fa-envelope"></i> meetadiet@gmail.com
             </p>
 
             {/* SOCIAL ICONS */}

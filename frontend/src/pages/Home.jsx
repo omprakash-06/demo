@@ -7,6 +7,7 @@ import Certificate1 from "../assets/certificate1.jpg";
 import Certificate2 from "../assets/certificate2.jpg";
 import Certificate3 from "../assets/certificate3.jpg";
 import Certificate4 from "../assets/certificate4.jpg";
+import dr from "../assets/dr.png"
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -62,16 +63,16 @@ export default function Home() {
       {/* ABOUT */}
       
       {/* PROFESSIONAL JOURNEY */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h1 className="text-black text-3xl md:text-4xl font-bold text-center mb-16">
-          Professional Journey
+      <section className="max-w-7xl mx-auto px-6 py-20  bg-[#f5f9f5]">
+        <h1 className="text-black text-4xl md:text-4xl font-bold text-center mb-16">
+          About Me 
         </h1>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* LEFT IMAGE */}
           <div className="flex justify-center">
             <img
-              src="https://imgs.search.brave.com/WCuJHeNCloBh6l5BDPgO7R3H9wiAUyL0oG9zJAmg_4o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2RiL2U4/L2MxL2RiZThjMTQz/ZGExM2EwMWZhMzUx/N2E2ZWUwZTQ3MjNm/LmpwZw"
+              src={dr}
               alt="Dr. Meeta"
               className="rounded-2xl shadow-xl w-80 md:w-96 object-cover ring-4 ring-green-200"
             />
@@ -100,16 +101,16 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-14 bg-[#f5f9f5]">
+      <section className="py-14 bg-green-200">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
             All Services
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex gap-4 overflow-x-auto no-scrollbar">
             {services.length === 0 ? (
               <p>Loading services...</p>
             ) : (
-              services.map((service) => (
+              services.slice(0, 3).map((service) => (
                 <ServiceCard
                   key={service._id}
                   img={service.image || "https://via.placeholder.com/300"}
@@ -128,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* TRAINING */}
-      <section className="py-14 bg-[#f7faf7]">
+      <section className="py-14 bg-green-100">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
             Training & Wellness Sessions
@@ -137,7 +138,7 @@ export default function Home() {
             {trainings.length === 0 ? (
               <p>Loading trainings...</p>
             ) : (
-              trainings.map((t) => (
+              trainings.slice(0, 3).map((t) => (
                 <TrainingCard
                   key={t._id}
                   img={t.image}
@@ -156,7 +157,7 @@ export default function Home() {
         </div>
       </section>
       {/* TESTIMONIALS */}
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-green-200">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-10">
            What Clients Say

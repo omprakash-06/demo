@@ -2,10 +2,10 @@ import Counter from "../components/Counter";
 import dr from "../assets/dr.png"
 export default function About() {
   return (
-    <div className="w-full bg-[#f7faf7] text-gray-800">
+    <div className="w-full bg-green-100 text-gray-800">
 
       {/* HEADER BANNER */}
-      <section className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+      <section className="relative w-full h-36 md:h-40 lg:h-96 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528"
           alt="Nutrition Banner"
@@ -28,7 +28,7 @@ export default function About() {
           {/* LEFT IMAGE */}
           <div className="flex justify-center">
             <img
-              src="https://imgs.search.brave.com/WCuJHeNCloBh6l5BDPgO7R3H9wiAUyL0oG9zJAmg_4o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2RiL2U4/L2MxL2RiZThjMTQz/ZGExM2EwMWZhMzUx/N2E2ZWUwZTQ3MjNm/LmpwZw"
+              src={dr}
               alt="Dr. Meeta"
               className="rounded-2xl shadow-xl w-80 md:w-96 object-cover ring-4 ring-green-200"
             />
@@ -56,32 +56,52 @@ export default function About() {
         </div>
       </section>
 
-      {/* MISSION STATEMENT */}
-      <section className="w-full bg-gradient-to from-green-100 to-green-50 py-20 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-10">
-            Mission Statement
-          </h2>
+      {/* MISSION & VISION SECTION */}
+       <section className="w-full bg-green-50 py-20 px-6 md:px-16">
+         <div className="flex flex-col md:flex-row gap-5 max-w-5xl mx-auto text-center space-y-20">
 
-          <div className="bg-white border-l-8 border-green-600 rounded-2xl shadow-lg p-10 md:p-12">
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed italic">
-              “Helping individuals achieve lasting wellness through personalized,
-              science-backed nutrition and holistic lifestyle guidance.”
-            </p>
-          </div>
-        </div>
-      </section>
+        {/* MISSION */}
+          <div>
+           <h2 className="text-3xl md:text-4xl font-extrabold text-green-700 mb-8 tracking-tight">
+            Our Mission
+           </h2>
+
+      <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
+        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+          “To transform lives by providing personalized, sustainable, and science-based 
+          nutrition guidance that helps individuals achieve long-term health and wellness.”
+        </p>
+      </div>
+    </div>
+
+    {/* VISION */}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-green-700 mb-8 tracking-tight">
+        Our Vision
+      </h2>
+
+      <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
+        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+          “To create a healthier community where every individual has the knowledge, support, 
+          and motivation to lead a balanced and nourishing lifestyle.”
+        </p>
+      </div>
+    </div>
+
+  </div>
+       </section>
+
 
       {/* NUMBERS SECTION */}
-      <section className="w-full bg-white py-20 px-6 md:px-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-14 text-center">
+      <section className="w-full bg-green-200 py-20 px-6 md:px-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-black mb-14 text-center">
           Numbers That Define Excellence
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
           <div className="bg-green-50 p-8 rounded-2xl shadow-sm border border-green-200 text-center hover:shadow-md transition">
-            <h3 className="text-5xl font-bold text-green-700 mb-3">#1</h3>
+            <h3 className="text-5xl font-bold text-green-700 mb-3">1</h3>
             <p className="text-gray-700 font-medium">
               Dietitian & Sports Nutritionist <br /> in Raipur
             </p>
@@ -134,32 +154,49 @@ export default function About() {
       </section>
 
       {/* SPECIALIZATION SECTION */}
-      <section className="bg-white py-20">
-        <div className="max-w-6xl mx-auto px-6">
+<section className="bg-green-100 py-20">
+  <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-3xl font-bold text-green-800 mb-14 text-center">
-            Expertise & Specializations
-          </h2>
+    <h2 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-14 text-center tracking-tight">
+      Expertise & Specializations
+    </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[
-              "Weight Management",
-              "Diabetes, thyroid, PCOD & lifestyle disorders",
-              "Clinical nutrition consulting",
-              "Sports & fitness nutrition",
-              "Pregnancy & child nutrition",
-            ].map((item, index) => (
-              <div 
-                key={index}
-                className="bg-green-50 p-6 rounded-xl shadow-sm border border-green-200 hover:shadow-md transition"
-              >
-                <h3 className="font-semibold text-lg text-green-800">{item}</h3>
-              </div>
-            ))}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      {[
+        { title: "Weight Management", icon: "⚖️" },
+        { title: "Diabetes, Thyroid, PCOD & Lifestyle Disorders", icon: "🩺" },
+        { title: "Clinical Nutrition Consulting", icon: "📋" },
+        { title: "Sports & Fitness Nutrition", icon: "💪" },
+        { title: "Pregnancy & Child Nutrition", icon: "🤰" },
+        { title: "Therapeutic Diet Planning", icon: "🥗" },
+      ].map((item, index) => (
+        <div 
+          key={index}
+          className="bg-white/70 backdrop-blur-md p-7 rounded-2xl shadow-sm border border-green-200 
+                     hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+        >
+          {/* ICON */}
+          <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 
+                          group-hover:bg-green-200 transition text-2xl">
+            {item.icon}
           </div>
 
+          {/* TITLE */}
+          <h3 className="font-semibold text-xl text-green-900 leading-snug">
+            {item.title}
+          </h3>
+
+          {/* UNDERLINE */}
+          <div className="h-1 w-0 bg-green-600 mt-3 rounded-full group-hover:w-16 transition-all"></div>
         </div>
-      </section>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+      
 
     </div>
   );

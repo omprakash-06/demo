@@ -20,13 +20,23 @@ function Services() {
     }, []);
   return (
     <div className="w-full  bg-[#f5f9f5]">
+            {/* HEADER BANNER */}
+      <section className="relative w-full h-36 md:h-40 lg:h-96 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528"
+          alt="Nutrition Banner"
+          className="w-full h-full object-cover brightness-50"
+        />
+        <div className="absolute inset-7 flex items-center justify-center px-6">
+          <h1 className="text-white text-3xl md:text-5xl font-bold tracking-wide text-center drop-shadow-xl">
+            Our Services
+          </h1>
+        </div>
+      </section>
+
       {/* INTRO SECTION */}
       <section className=" mt-10px py-14 shadow-xl">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-            Services
-          </h2>
-
           <h3 className=" md:text-xl font-bold text-gray-700 mb-3 text-3xl">
             Our Nutrition & Diet Services
           </h3>
