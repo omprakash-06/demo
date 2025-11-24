@@ -3,7 +3,7 @@ export default function CertificateCard({ img, size }) {
     <div className="  flex items-center justify-center">
       <img
         src={img}
-        alt="Certificate"
+        alt="Certificates"
         className={size || "w-full h-full object-cover rounded-lg"}
       />
     </div>
