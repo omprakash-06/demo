@@ -47,15 +47,15 @@ export default function Footer() {
             {/* SOCIAL ICONS */}
             <div className="flex gap-4 mt-3">
               <a href="https://wa.me/919589345938?text=I%20want%20to%20book%20a%20diet%20consult" className="text-2xl text-green-700 hover:text-green-600">
-                <i className="fa-brands fa-square-whatsapp"></i>
+                <i className="fa-brands fa-square-whatsapp !text-black"></i>
               </a>
 
               <a href="https://www.instagram.com/dr.meetamishra?igsh=MXJ3cW9xN2VmdTJuaA==" className="text-2xl text-pink-600 hover:text-pink-500">
-                <i className="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram !text-black"></i>
               </a>
 
               <a href="https://www.facebook.com/DrMeetaMishra" className="text-2xl text-blue-600 hover:text-blue-500">
-                <i className="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook !text-black"></i>
               </a>
 
               <a href="#" className="text-2xl text-black hover:text-gray-700">
