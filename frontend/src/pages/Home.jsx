@@ -134,7 +134,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
             Training & Wellness Sessions
           </h2>
-          <div className="flex flex-col md:flex-row gap-4 overflow-x-auto no-scrollbar">
+          <div className="flex gap-4 overflow-x-auto no-scrollbar">
             {trainings.length === 0 ? (
               <p>Loading trainings...</p>
             ) : (
