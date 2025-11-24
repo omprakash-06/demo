@@ -21,7 +21,7 @@ export default function TrainingCard({ img, title, subtitle, description }) {
       
       {/* CTA Button */}
         <Link to="https://wa.me/919589345938?text=I%20want%20to%20book%20a%20diet%20consult">
-        <button className="mt-2 px-5 py-2 text-sm font-medium bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all">
+        <button className="m-4 px-5 py-2 text-sm font-medium bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all">
           Book Appointment →
         </button>
         </Link>
