@@ -19,7 +19,7 @@ export default function Footer() {
 
           {/* QUICK LINKS */}
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-gray-950">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-3 text-white">Quick Links</h3>
             <ul className="space-y-2 text-sm text-white">
               <li><Link to="/" className="hover:text-green-700">Home</Link></li>
               <li><Link to="/about" className="hover:text-green-700">About</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div>
-            <h3 className="text-lg font-semibold mb-3 text-gray-900">Contact</h3>
+            <h3 className="text-lg font-semibold mb-3 text-white">Contact</h3>
 
             <p className="text-sm text-white mb-1">
               <i className="fa-solid fa-location-dot"></i> In Front of Indian Chilly,Vidya's Protein World, Shankar Nagar, Raipur , Chhattisgarh
