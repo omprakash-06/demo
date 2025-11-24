@@ -33,7 +33,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div className="bg-green-50 h-full py-16 px-6">
+    <div className="bg-green-50 w-full py-16 px-6">
      <section
   className="relative py-20 px-6 md:px-20 text-center bg-center bg-cover bg-no-repeat"
   style={{
