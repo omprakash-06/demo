@@ -5,7 +5,7 @@ export default function About() {
     <div className="w-full bg-green-100 text-gray-800">
 
       {/* HEADER BANNER */}
-      <section className="relative w-full h-36 md:h-40 lg:h-96 overflow-hidden">
+      <section className="relative w-full h-36 md:h-40 lg:h-64 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528"
           alt="Nutrition Banner"
