@@ -190,13 +190,14 @@ export default function Home() {
             Recognitions & Achievements
           </h2>
 
-         <div className="flex flex-col  lg:flex-row  gap-6  no-scrollbar">
-           <CertificateCard  img={Certificate1}    size="w-64 h-64 transform   rotate-270 rounded-lg"/>
-           <CertificateCard   img={Certificate3}   size="w-64 h-64  transform  rotate-270 rounded-lg"/>
-           <CertificateCard   img={Certificate2}   size="w-64 h-64 rounded-lg"/>
-           <CertificateCard   img={Certificate4}   size="w-64 h-64 rounded-lg" />
-        </div>
-
+         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+           <CertificateCard img={Certificate1} size="w-64 h-64 transform rotate-270 rounded-lg" />
+           <CertificateCard img={Certificate3} size="w-64 h-64 transform rotate-270 rounded-lg" />
+           <CertificateCard img={Certificate2} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate4} size="w-64 h-64 rounded-lg" />
+         </div>
+          
+  
         </div>
       </section>
 
