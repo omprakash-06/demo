@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function TrainingCard({ img, title, subtitle, description }) {
   return (
     <div className="w-full rounded-2xl overflow-hidden shadow-md mb-8">
