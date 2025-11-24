@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-100 text-black">
+    <footer className="bg-green-800 text-white">
       <div className="max-w-6xl mx-auto px-6 py-10">
 
         {/* GRID 4 COLUMNS */}
@@ -10,8 +10,8 @@ export default function Footer() {
 
           {/* ABOUT */}
           <div>
-            <h2 className="text-2xl font-bold mb-3 text-black">Dr. Meeta Mishra</h2>
-            <p className="text-sm text-gray-800">
+            <h2 className="text-2xl font-bold mb-3 text-white">Dr. Meeta Mishra</h2>
+            <p className="text-sm text-white">
               Certified Dietitian & Clinical Nutritionist helping people achieve
               sustainable health through personalized nutrition.
             </p>
@@ -20,7 +20,7 @@ export default function Footer() {
           {/* QUICK LINKS */}
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-950">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-gray-800">
+            <ul className="space-y-2 text-sm text-white">
               <li><Link to="/" className="hover:text-green-700">Home</Link></li>
               <li><Link to="/about" className="hover:text-green-700">About</Link></li>
               <li><Link to="/services" className="hover:text-green-700">Services</Link></li>
@@ -34,13 +34,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-900">Contact</h3>
 
-            <p className="text-sm text-gray-800 mb-1">
+            <p className="text-sm text-white mb-1">
               <i className="fa-solid fa-location-dot"></i> In Front of Indian Chilly,Vidya's Protein World, Shankar Nagar, Raipur , Chhattisgarh
             </p>
-            <p className="text-sm text-gray-900 mb-1">
+            <p className="text-sm text-white mb-1">
               <i className="fa-solid fa-phone"></i> +91 9589345938 or +91 8982627838
             </p>
-            <p className="text-sm text-gray-900 mb-1">
+            <p className="text-sm text-white mb-1">
               <i className="fa-solid fa-envelope"></i> meetadiet@gmail.com
             </p>
 

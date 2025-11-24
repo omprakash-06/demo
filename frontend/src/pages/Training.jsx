@@ -35,17 +35,31 @@ function Training() {
 
   return (
     <div className="w-full bg-[#f7faf7]">
-      {/* HERO SECTION */}
-      <section className="py-16 px-6 md:px-20 text-center">
-        <h1 className="text-4xl font-bold text-green-700 mb-4">
-          Training & Workshop Programs
-        </h1>
-        <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed text-lg">
-          Showcase of all available nutrition training sessions conducted by{" "}
-          <span className="font-semibold">Dr. Meeta Mishra</span>.
-        </p>
-        <h1 className="text-3xl font-bold text-black mt-8">Available Training Programs</h1>
-      </section>
+<section
+  className="relative py-20 px-6 md:px-20 text-center bg-center bg-cover bg-no-repeat"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528')"
+  }}
+>
+  {/* Light overlay for readability */}
+  <div className="absolute inset-0 bg-black/70"></div>
+
+  {/* Content */}
+  <div className="relative">
+    <h1 className="text-4xl font-bold text-white mb-4">
+      Training & Workshop Programs
+    </h1>
+
+    <p className="text-white max-w-2xl mx-auto leading-relaxed text-lg">
+      Showcase of all available nutrition training sessions conducted by{" "}
+      <span className="font-semibold">Dr. Meeta Mishra</span>.
+    </p>
+
+    <h1 className="text-3xl font-bold text-white mt-8">
+      Available Training Programs
+    </h1>
+  </div>
+</section>
 
       {/* TRAINING CARDS */}
       <section className="py-14 px-6 md:px-20 max-w-6xl mx-auto">

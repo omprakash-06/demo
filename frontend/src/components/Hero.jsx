@@ -4,7 +4,7 @@ import bg from "../assets/bg.png";
 export default function Hero() {
   return (
     <section
-      className="relative w-full h-[90vh] bg-cover bg-center flex items-center"
+      className="relative w-full h-64 md:h-[90vh] bg-cover bg-center flex items-center"
       style={{
         backgroundImage: `url(${bg})`,
       }}

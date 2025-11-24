@@ -34,12 +34,28 @@ export default function Testimonials() {
 
   return (
     <div className="bg-green-50 min-h-screen py-16 px-6">
-      <h2 className="text-3xl font-bold text-center text-green-700 mb-10">
-        Client Story Gallery
-      </h2>
-      <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-        Real transformation journeys that inspire and motivate.
-      </p>
+     <section
+  className="relative py-20 px-6 md:px-20 text-center bg-center bg-cover bg-no-repeat"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528')"
+  }}
+>
+  {/* Light overlay for readability */}
+  <div className="absolute inset-0 bg-black/70"></div>
+
+
+  {/* Content */}
+  <div className="relative z-10">
+    <h2 className="text-3xl font-bold text-white mb-4">
+      Client Story Gallery
+    </h2>
+
+    <p className="text-center text-gray-200 max-w-2xl mx-auto mb-12 text-lg">
+      Real transformation journeys that inspire and motivate.
+    </p>
+  </div>
+</section>
+
 
       {/* Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
