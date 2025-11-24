@@ -8,7 +8,7 @@ export default function About() {
       <section className="relative w-full h-36 md:h-40 lg:h-64 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528"
-          alt="Nutrition Banner"
+          alt="Nutrition Banners"
           className="w-full h-full object-cover brightness-50"
         />
         <div className="absolute inset-0 flex items-center justify-center px-6">
