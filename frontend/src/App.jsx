@@ -9,7 +9,6 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Training from "./pages/Training";
 import Testimonials from "./pages/Testimonials";
-import Certificates from "./pages/Certificates";
 import Contact from "./pages/Contact";
 
 /* ADMIN */
@@ -36,7 +35,6 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/training" element={<Training />} />
           <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/certificates" element={<Certificates />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
 

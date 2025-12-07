@@ -46,7 +46,7 @@ function Training() {
 
   {/* Content */}
   <div className="relative">
-    <h1 className="text-4xl font-bold text-white mb-4">
+    <h1 className="text-2xl md:text-5xl font-bold text-white mb-4">
       Training & Workshop Programs
     </h1>
 
@@ -55,7 +55,7 @@ function Training() {
       <span className="font-semibold">Dr. Meeta Mishra</span>.
     </p>
 
-    <h1 className="text-3xl font-bold text-white mt-8">
+    <h1 className="text-2xl font-bold text-white mt-8">
       Available Training Programs
     </h1>
   </div>

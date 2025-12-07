@@ -12,7 +12,7 @@ export default function About() {
           className="w-full h-full object-cover brightness-50"
         />
         <div className="absolute inset-0 flex items-center justify-center px-6">
-          <h1 className="text-white text-3xl md:text-5xl font-bold tracking-wide text-center drop-shadow-xl">
+          <h1 className="text-white text-2xl md:text-5xl font-bold tracking-wide text-center drop-shadow-xl">
             About Dr. Meeta Mishra
           </h1>
         </div>
