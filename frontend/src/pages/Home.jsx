@@ -65,7 +65,7 @@ export default function Home() {
       {/* PROFESSIONAL JOURNEY */}
       <section className="max-w-7xl mx-auto px-6 py-20  bg-[#f5f9f5]">
         <h1 className="text-black text-4xl md:text-4xl font-bold text-center mb-16">
-          About Me 
+          About Dr. Meeta Mishra 
         </h1>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -85,16 +85,20 @@ export default function Home() {
             </h2>
 
             <p className="text-gray-700 leading-relaxed text-lg">
-              <strong>Dr. Meeta Mishra</strong> is a distinguished certified nutritionist
-              with over <strong>17 years</strong> of experience in
-              <strong> clinical, lifestyle, and sports nutrition</strong>.
-              With an <strong>MSc in Food & Nutrition and a PhD in Nutrition</strong>,
-              she combines scientific expertise with a compassionate, practical approach.
-              <br /><br />
-              She has contributed 8 years to clinical nutrition at Jubesta Hospital and
-              <strong> 8 years</strong> as a sports nutrition consultant at Planet Gym.
-              In 2017, she founded her own clinic at Vidya Protein World, Shankar Nagar,
-              Raipur — now a trusted centre for personalized diet and wellness plans.
+              <strong>Dr. Meeta Mishra </strong>is known as <strong>Raipur’s No.1</strong> and most trusted personalized diet planner,
+              helping people improve their health with practical and easy-to-follow nutrition guidance. 
+              With more than <strong>17 years of experience</strong>, she has worked in clinical nutrition, lifestyle nutrition, 
+              and sports nutrition. She holds an <strong> MSc in Food & Nutrition and a PhD in Nutrition</strong>,
+              giving her a strong understanding of how food supports overall health.
+              <strong>Dr. Mishra</strong> spent eight years at <strong>Jubesta Hospital</strong>, where she helped patients manage diabetes, 
+              heart issues, obesity, and other health conditions through proper diet. She also worked for eight years as a sports nutrition consultant at Planet Gym, 
+              creating diet plans that improved strength, stamina, and recovery for athletes and fitness enthusiasts.
+              <strong>In 2017</strong>, <strong>Dr. Mishra started her own clinic at Vidya Protein World, Shankar Nagar, Raipur.</strong> 
+              Today, her clinic is a trusted centre for weight loss, lifestyle improvement, healthy eating routines, 
+              and overall wellness support. With more than  <strong>1,000</strong> happy clients, she is appreciated for her friendly approach, 
+              clear communication, and personalized diet plans that fit easily into daily life.
+              <strong> Dr. Meeta Mishra</strong> focuses on sustainable changes rather than quick fixes,
+              helping people achieve better health, more energy, and long-term results through balanced nutrition and simple lifestyle habits.
             </p>
           </div>
         </div>
@@ -104,7 +108,7 @@ export default function Home() {
       <section className="py-14 bg-green-200">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
-            All Services
+           Personalized Diet Plans & Nutrition Care 
           </h2>
           <div className="flex flex-col md:flex-row gap-4 overflow-x-auto no-scrollbar">
             {services.length === 0 ? (

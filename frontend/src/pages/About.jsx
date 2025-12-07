@@ -101,7 +101,7 @@ export default function About() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
           <div className="bg-green-50 p-8 rounded-2xl shadow-sm border border-green-200 text-center hover:shadow-md transition">
-            <h3 className="text-5xl font-bold text-green-700 mb-3">1</h3>
+            <h3 className="text-5xl font-bold text-green-700 mb-3">No.1</h3>
             <p className="text-gray-700 font-medium">
               Dietitian & Sports Nutritionist <br /> in Raipur
             </p>
