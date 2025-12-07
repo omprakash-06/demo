@@ -4,11 +4,9 @@ export default function TestimonialCard({ name, text, img }) {
 
       {/* TOP SECTION: IMAGE + NAME + STARS */}
       <div className="flex items-center gap-3 mb-3">
-        <img
-          src={img}
-          alt={text}
-          className="w-10 h-10 rounded-full object-cover"
-        />
+        <div className="w-10 h-10 rounded-full bg-gray-300 text-gray-800 flex items-center justify-center font-semibold text-lg">
+          {img}
+        </div>
 
         <div>
           <h3 className="font-semibold text-gray-800 text-sm">{name}</h3>

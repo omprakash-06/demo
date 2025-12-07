@@ -165,19 +165,24 @@ export default function Home() {
 
           <div className="flex gap-6 overflow-x-auto no-scrollbar">
             <TestimonialCard
-              name="Ananya Sharma"
-              img="https://i.pravatar.cc/150?img=32"
-              text="Weight management became easy with Dr Meeta!"
+              name="Arzoo Poonam"
+              img="A"
+              text="I really want to express my gratitude to dr.meeta mishra for helping me in my weight loss Journey.She is been perfect guide.Best nutritionist is City."
             />
             <TestimonialCard
-              name="Ameya Sharra"
-              img="https://i.pravatar.cc/150?img=12"
-              text="Her diet plan improved my energy & lifestyle!"
+              name="Amit Jain"
+              img="A"
+              text="Me and my spouse has lost 12kg and 5 kg with in given time duration.very nicely explained about each and every detail of our diet by mam"
             />
             <TestimonialCard
-              name="Anusha Verma"
-              img="https://i.pravatar.cc/150?img=47"
-              text="Very scientific and professional approach!"
+              name="Ravi jaiswal"
+              img="R"
+              text="Dr. Meeta Mishra is very Humble & caring. Good human being as well as indepth knowledge of Nutrition."
+            />
+            <TestimonialCard
+              name="Monika Tiwari"
+              img="M"
+              text="She is a superb dietician … she is humble as well as a genuine dietician to which I have come across ❤"
             />
           </div>
         </div>
