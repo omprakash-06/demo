@@ -135,7 +135,7 @@ export default function Home() {
             {trainings.length === 0 ? (
               <p>Loading trainings...</p>
             ) : (
-              trainings.slice(0, 4).map((t) => (
+              trainings.slice(0, 3).map((t) => (
                 <TrainingCard
                   key={t._id}
                   img={t.image}

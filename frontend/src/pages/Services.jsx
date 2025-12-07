@@ -1,4 +1,3 @@
-
 import ServiceCard from "../components/ServicesCard";
 import { useState,useEffect } from "react";
 function Services() {

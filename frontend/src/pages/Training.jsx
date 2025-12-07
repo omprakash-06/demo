@@ -62,7 +62,7 @@ function Training() {
 </section>
 
       {/* TRAINING CARDS */}
-      <section className="py-14 px-6 md:px-20 max-w-6xl mx-auto">
+      <section className="py-14 px-6 md:px-20 max-w-6xl mx-auto overflow-x-auto no-scrollbar">
   {trainings.length === 0 ? (
     <p className="text-center text-gray-500">No training programs available.</p>
   ) : (
@@ -78,7 +78,7 @@ function Training() {
       ))}
     </div>
   )}
-      </section>
+  </section>
       <Brand/>
     </div>
   );
