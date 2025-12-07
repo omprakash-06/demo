@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function ServiceCard({ img, title, desc }) {
   return (
     <div className="flex flex-col text-center border border-green-200 rounded-2xl bg-white shadow-sm hover:shadow-md hover:border-green-500 transition-all cursor-pointer overflow-hidden">

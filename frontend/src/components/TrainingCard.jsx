@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function TrainingCard({ img, bg, title, subtitle }) {
   return (
     <div
