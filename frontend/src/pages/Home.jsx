@@ -93,7 +93,9 @@ export default function Home() {
               <strong>Dr. Mishra</strong> spent eight years at <strong>Jubesta Hospital</strong>, where she helped patients manage diabetes, 
               heart issues, obesity, and other health conditions through proper diet. She also worked for eight years as a sports nutrition consultant at Planet Gym, 
               creating diet plans that improved strength, stamina, and recovery for athletes and fitness enthusiasts.
-              <br></br>
+            </p>
+            <br></br>
+          <p className="text-gray-700 leading-relaxed text-lg">
               <strong>In 2017</strong>, <strong>Dr. Mishra started her own clinic at Vidya Protein World, Shankar Nagar, Raipur.</strong> 
               Today, her clinic is a trusted centre for weight loss, lifestyle improvement, healthy eating routines, 
               and overall wellness support. With more than  <strong>1,000</strong> happy clients, she is appreciated for her friendly approach, 
