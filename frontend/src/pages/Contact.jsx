@@ -68,7 +68,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-green-700 mb-4">Contact Details</h3>
             <p className="text-gray-700 mb-3">📍 <strong>Address:</strong><br/>In Front of Indian Chilly, Vidya’s Protein World,<br/>Shankar Nagar, Raipur, Chhattisgarh</p>
             <p className="text-gray-700 mb-3">📞 <strong>Phone / WhatsApp:</strong><br/>8982627838, 9589345938</p>
-            <p className="text-gray-700 mb-3">✉️ <strong>Email:</strong><br/>info@drmeetamishra.com</p>
+            <p className="text-gray-700 mb-3">✉️ <strong>Email:</strong><br/>meetadiet@gmail.com</p>
           </div>
         </div>
 

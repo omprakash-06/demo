@@ -1,5 +1,5 @@
 import Counter from "../components/Counter";
-import dr from "../assets/dr.png"
+import dr from "../assets/dr.jpg"
 export default function About() {
   return (
     <div className="w-full bg-green-100 text-gray-800">

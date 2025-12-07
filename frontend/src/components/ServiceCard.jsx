@@ -20,6 +20,11 @@ export default function ServiceCard({ img, title, desc }) {
         <p className="text-gray-600 text-sm leading-relaxed mb-4">
           {desc}
         </p>
+        <Link to="/services">
+        <button className="bg-green-600 text-white px-4 py-2 mt-3 rounded-lg text-sm">
+          Learn More
+        </button>
+        </Link>
       </div>
       
     </div>

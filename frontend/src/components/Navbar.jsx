@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -9,9 +10,9 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <Link to="/" className="text-xl font-bold text-green-700">
-         <img src={logo} alt="logo" className="h-10 md:h-20" />
-        </Link>
+        <NavLink to="/" className="text-xl font-bold text-green-700">
+          <img src={logo} alt="logo" className="h-10 md:h-20" />
+        </NavLink>
 
         {/* Hamburger Icon */}
         <button
@@ -23,24 +24,116 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-gray-600 font-medium">
-          <li><Link to="/" className="hover:text-green-600">Home</Link></li>
-          <li><Link to="/about" className="hover:text-green-600">About</Link></li>
-          <li><Link to="/services" className="hover:text-green-600">Services</Link></li>
-          <li><Link to="/training" className="hover:text-green-600">Training</Link></li>
-          <li><Link to="/testimonials" className="hover:text-green-600">Client Story</Link></li>
-          <li><Link to="/contact" className="hover:text-green-600">Contact</Link></li>
+
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-green-600 text-green-700 pb-1"
+                  : "hover:text-green-600"
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-green-600 text-green-700 pb-1"
+                  : "hover:text-green-600"
+              }
+            >
+              About
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-green-600 text-green-700 pb-1"
+                  : "hover:text-green-600"
+              }
+            >
+              Services
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/training"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-green-600 text-green-700 pb-1"
+                  : "hover:text-green-600"
+              }
+            >
+              Training
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/testimonials"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-green-600 text-green-700 pb-1"
+                  : "hover:text-green-600"
+              }
+            >
+              Client Story
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "border-b-2 border-green-600 text-green-700 pb-1"
+                  : "hover:text-green-600"
+              }
+            >
+              Contact
+            </NavLink>
+          </li>
+
         </ul>
       </div>
 
       {/* Mobile Menu */}
       {open && (
         <ul className="md:hidden bg-white border-t text-gray-700 font-medium">
-          <li className="px-6 py-3 border-b"><Link to="/" onClick={() => setOpen(false)}>Home</Link></li>
-          <li className="px-6 py-3 border-b"><Link to="/about" onClick={() => setOpen(false)}>About</Link></li>
-          <li className="px-6 py-3 border-b"><Link to="/services" onClick={() => setOpen(false)}>Services</Link></li>
-          <li className="px-6 py-3 border-b"><Link to="/training" onClick={() => setOpen(false)}>Training</Link></li>
-          <li className="px-6 py-3 border-b"><Link to="/testimonials" onClick={() => setOpen(false)}>Client Story</Link></li>
-          <li className="px-6 py-3"><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
+
+          <li className="px-6 py-3 border-b">
+            <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink>
+          </li>
+
+          <li className="px-6 py-3 border-b">
+            <NavLink to="/about" onClick={() => setOpen(false)}>About</NavLink>
+          </li>
+
+          <li className="px-6 py-3 border-b">
+            <NavLink to="/services" onClick={() => setOpen(false)}>Services</NavLink>
+          </li>
+
+          <li className="px-6 py-3 border-b">
+            <NavLink to="/training" onClick={() => setOpen(false)}>Training</NavLink>
+          </li>
+
+          <li className="px-6 py-3 border-b">
+            <NavLink to="/testimonials" onClick={() => setOpen(false)}>Client Story</NavLink>
+          </li>
+
+          <li className="px-6 py-3">
+            <NavLink to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
+          </li>
+
         </ul>
       )}
     </nav>

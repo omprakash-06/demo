@@ -7,7 +7,7 @@ import Certificate1 from "../assets/certificate1.jpg";
 import Certificate2 from "../assets/certificate2.jpg";
 import Certificate3 from "../assets/certificate3.jpg";
 import Certificate4 from "../assets/certificate4.jpg";
-import dr from "../assets/dr.png"
+import dr from "../assets/dr.jpg"
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -120,11 +120,8 @@ export default function Home() {
               ))
             )}
           </div>
-          <Link to="/services">
-            <button className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-blue-700 transition">
-              View All Services →
-            </button>
-          </Link>
+          
+            
         </div>
       </section>
 
@@ -138,7 +135,7 @@ export default function Home() {
             {trainings.length === 0 ? (
               <p>Loading trainings...</p>
             ) : (
-              trainings.slice(0, 3).map((t) => (
+              trainings.slice(0, 4).map((t) => (
                 <TrainingCard
                   key={t._id}
                   img={t.image}
@@ -149,11 +146,6 @@ export default function Home() {
               ))
             )}
           </div>
-          <Link to="/training">
-            <button className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-blue-700 transition">
-              View Training Programs →
-            </button>
-          </Link>
         </div>
       </section>
       {/* TESTIMONIALS */}
