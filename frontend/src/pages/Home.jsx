@@ -35,29 +35,30 @@ export default function Home() {
     }
   };
 
-  // Fetch trainings
   const fetchTrainings = async () => {
     try {
       const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/training/all`);
       const data = await res.json();
-
+  
       const trainingsWithImages = data.map((t) => ({
         ...t,
-        image: t.image
-          ? `data:${t.image.contentType};base64,${btoa(
-              new Uint8Array(t.image.data.data).reduce(
-                (acc, byte) => acc + String.fromCharCode(byte),
-                ""
-              )
-            )}`
-          : null,
+        image:
+          t.images && t.images.length > 0
+            ? `data:${t.images[0].contentType};base64,${btoa(
+                new Uint8Array(t.images[0].data.data).reduce(
+                  (acc, byte) => acc + String.fromCharCode(byte),
+                  ""
+                )
+              )}`
+            : null,
       }));
-
+  
       setTrainings(trainingsWithImages);
     } catch (err) {
       console.error("Error fetching trainings:", err);
     }
   };
+  
 
   useEffect(() => {
     fetchServices();

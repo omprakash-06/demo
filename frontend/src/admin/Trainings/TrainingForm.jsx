@@ -5,18 +5,17 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [description, setDescription] = useState("");
-  const [file, setFile] = useState(null); // ✅ single image
+  const [files, setFiles] = useState([]); // ✅ multiple images
   const [editingId, setEditingId] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Auto-fill for Edit Mode
   useEffect(() => {
     if (selected) {
       setEditingId(selected._id);
       setTitle(selected.title);
       setSubtitle(selected.subtitle);
       setDescription(selected.description);
-      setFile(null); // image optional on edit
+      setFiles([]);
     }
   }, [selected]);
 
@@ -24,7 +23,7 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
     setTitle("");
     setSubtitle("");
     setDescription("");
-    setFile(null);
+    setFiles([]);
     setEditingId(null);
     setSelected(null);
   };
@@ -39,10 +38,10 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
     formData.append("subtitle", subtitle);
     formData.append("description", description);
 
-    // 🔥 IMPORTANT: backend expects "images" (array)
-    if (file) {
-      formData.append("images", file); // ✅ single image but key = images
-    }
+    // 🔥 multiple images
+    files.forEach((file) => {
+      formData.append("images", file);
+    });
 
     try {
       setLoading(true);
@@ -74,51 +73,47 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
   };
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow border space-y-4 mb-6">
+    <div className="bg-white p-4 rounded-xl shadow space-y-4 mb-6">
       <h2 className="text-2xl font-semibold">
-        {editingId ? "Update Training / Workshop" : "Add Training / Workshop"}
+        {editingId ? "Update Training" : "Add Training"}
       </h2>
 
       <input
-        type="text"
-        placeholder="Title"
         value={title}
-        onChange={e => setTitle(e.target.value)}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Title"
         className="w-full border px-3 py-2 rounded-lg"
       />
 
       <input
-        type="text"
-        placeholder="Subtitle"
         value={subtitle}
-        onChange={e => setSubtitle(e.target.value)}
+        onChange={(e) => setSubtitle(e.target.value)}
+        placeholder="Subtitle"
         className="w-full border px-3 py-2 rounded-lg"
       />
 
       <textarea
-        placeholder="Description"
         value={description}
-        onChange={e => setDescription(e.target.value)}
+        onChange={(e) => setDescription(e.target.value)}
         rows="4"
+        placeholder="Description"
         className="w-full border px-3 py-2 rounded-lg"
       />
 
-      {/* IMAGE UPLOAD */}
-      <label className="border-2 border-dashed border-green-400 rounded-lg w-full h-48 flex flex-col justify-center items-center cursor-pointer hover:bg-green-50">
-        {file ? (
-          <p className="text-green-700 font-medium">{file.name}</p>
-        ) : (
-          <>
-            <p className="text-gray-600">Image Upload</p>
-            <p className="text-xs text-gray-400">Click to upload (1 image)</p>
-          </>
-        )}
+      {/* MULTIPLE IMAGE UPLOAD */}
+      <label className="border-2 border-dashed border-green-400 rounded-lg h-40 flex flex-col justify-center items-center cursor-pointer">
+        <p className="text-gray-600">
+          {files.length > 0
+            ? `${files.length} image selected`
+            : "Click to upload images"}
+        </p>
 
         <input
           type="file"
+          multiple
           accept="image/*"
           className="hidden"
-          onChange={e => setFile(e.target.files[0])}
+          onChange={(e) => setFiles([...e.target.files])}
         />
       </label>
 

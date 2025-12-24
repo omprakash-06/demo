@@ -5,29 +5,32 @@ function Training() {
   const [trainings, setTrainings] = useState([]);
   const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
- const fetchTrainings = async () => {
-  try {
-    const res = await fetch(`${BACKEND}/training/all`);
-    const data = await res.json();
-
-    const trainingsWithImages = data.map((t) => ({
-      ...t,
-      image: t.image
-        ? `data:${t.image.contentType};base64,${btoa(
-            new Uint8Array(t.image.data.data).reduce(
-              (acc, byte) => acc + String.fromCharCode(byte),
-              ""
+  const fetchTrainings = async () => {
+    try {
+      const res = await fetch(`${BACKEND}/training/all`);
+      const data = await res.json();
+  
+      const trainingsWithImages = data.map((t) => ({
+        ...t,
+        images: t.images
+          ? t.images.map(
+              (img) =>
+                `data:${img.contentType};base64,${btoa(
+                  new Uint8Array(img.data.data).reduce(
+                    (acc, byte) => acc + String.fromCharCode(byte),
+                    ""
+                  )
+                )}`
             )
-          )}`
-        : null,
-    }));
-
-    setTrainings(trainingsWithImages);
-  } catch (err) {
-    console.error("Error fetching trainings:", err);
-  }
-};
-
+          : [],
+      }));
+  
+      setTrainings(trainingsWithImages);
+    } catch (err) {
+      console.error("Error fetching trainings:", err);
+    }
+  };
+  
 
   useEffect(() => {
     fetchTrainings();
@@ -68,14 +71,14 @@ function Training() {
   ) : (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
       {trainings.map((t) => (
-        <TrainingCard
-          key={t._id}
-          img={t.image}
-          title={t.title}
-          subtitle={t.subtitle}
-          description={t.description}
-        />
-      ))}
+  <TrainingCard
+    key={t._id}
+    images={t.images}   // ✅ array pass
+    title={t.title}
+    subtitle={t.subtitle}
+    description={t.description}
+  />
+))}
     </div>
   )}
   </section>
@@ -85,3 +88,4 @@ function Training() {
 }
 
 export default Training;
+
