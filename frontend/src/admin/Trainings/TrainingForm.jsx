@@ -5,7 +5,7 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
   const [title, setTitle] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [description, setDescription] = useState("");
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState(null); // ✅ single image
   const [editingId, setEditingId] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -16,7 +16,7 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
       setTitle(selected.title);
       setSubtitle(selected.subtitle);
       setDescription(selected.description);
-      setFile(null);
+      setFile(null); // image optional on edit
     }
   }, [selected]);
 
@@ -38,10 +38,15 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
     formData.append("title", title);
     formData.append("subtitle", subtitle);
     formData.append("description", description);
-    if (file) formData.append("image", file);
+
+    // 🔥 IMPORTANT: backend expects "images" (array)
+    if (file) {
+      formData.append("images", file); // ✅ single image but key = images
+    }
 
     try {
       setLoading(true);
+
       const url = editingId
         ? `${BACKEND}/training/update/${editingId}`
         : `${BACKEND}/training/create`;
@@ -98,15 +103,17 @@ export default function TrainingForm({ selected, setSelected, refresh }) {
         className="w-full border px-3 py-2 rounded-lg"
       />
 
+      {/* IMAGE UPLOAD */}
       <label className="border-2 border-dashed border-green-400 rounded-lg w-full h-48 flex flex-col justify-center items-center cursor-pointer hover:bg-green-50">
         {file ? (
           <p className="text-green-700 font-medium">{file.name}</p>
         ) : (
           <>
             <p className="text-gray-600">Image Upload</p>
-            <p className="text-xs text-gray-400">Drag & drop or click here</p>
+            <p className="text-xs text-gray-400">Click to upload (1 image)</p>
           </>
         )}
+
         <input
           type="file"
           accept="image/*"

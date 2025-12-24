@@ -6,22 +6,26 @@ export default function TrainingTable({ setSelected, refreshKey }) {
 
   const fetchTrainings = async () => {
     try {
-      const res = await fetch(`${BACKEND}/training/all`, { credentials: "include" });
+      const res = await fetch(`${BACKEND}/training/all`, {
+        credentials: "include",
+      });
       const data = await res.json();
 
-      const formatted = data?.map(t => ({
+      // ✅ images[] → first image base64
+      const formatted = data.map((t) => ({
         ...t,
-        img: t.image
-          ? `data:${t.image.contentType};base64,${btoa(
-              new Uint8Array(t.image.data.data).reduce(
-                (acc, b) => acc + String.fromCharCode(b),
-                ""
-              )
-            )}`
-          : null,
+        img:
+          t.images && t.images.length > 0
+            ? `data:${t.images[0].contentType};base64,${btoa(
+                new Uint8Array(t.images[0].data.data).reduce(
+                  (acc, b) => acc + String.fromCharCode(b),
+                  ""
+                )
+              )}`
+            : null,
       }));
 
-      setTrainings(formatted || []);
+      setTrainings(formatted);
     } catch (err) {
       console.error(err);
       setTrainings([]);
@@ -32,7 +36,7 @@ export default function TrainingTable({ setSelected, refreshKey }) {
     fetchTrainings();
   }, [refreshKey]);
 
-  const handleDelete = async id => {
+  const handleDelete = async (id) => {
     if (!confirm("Are you sure?")) return;
 
     try {
@@ -54,15 +58,17 @@ export default function TrainingTable({ setSelected, refreshKey }) {
       alert("Something went wrong");
     }
   };
-  
-  const handleEdit = training => {
+
+  const handleEdit = (training) => {
     setSelected(training);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className="bg-white p-4 rounded-xl shadow border overflow-x-auto">
-      <h3 className="text-lg font-semibold mb-2">Existing Trainings / Workshops</h3>
+      <h3 className="text-lg font-semibold mb-2">
+        Existing Trainings / Workshops
+      </h3>
 
       {trainings.length === 0 ? (
         <p>No trainings yet.</p>
@@ -79,15 +85,20 @@ export default function TrainingTable({ setSelected, refreshKey }) {
           </thead>
 
           <tbody>
-            {trainings.map(t => (
+            {trainings.map((t) => (
               <tr key={t._id}>
                 <td className="border p-2">
                   {t.img ? (
-                    <img src={t.img} className="w-20 h-20 object-cover rounded" />
+                    <img
+                      src={t.img}
+                      className="w-20 h-20 object-cover rounded"
+                      alt="training"
+                    />
                   ) : (
                     "No Image"
                   )}
                 </td>
+
                 <td className="border p-2">{t.title}</td>
                 <td className="border p-2">{t.subtitle}</td>
                 <td className="border p-2">{t.description}</td>

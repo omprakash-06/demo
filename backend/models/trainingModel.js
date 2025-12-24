@@ -1,14 +1,18 @@
 const mongoose = require("mongoose");
 
+const imageSchema = new mongoose.Schema({
+  data: Buffer,
+  contentType: String,
+});
+
 const trainingSchema = new mongoose.Schema(
   {
     title: String,
     subtitle: String,
     description: String,
-    image: {
-      data: Buffer,
-      contentType: String,
-    },
+
+    // 🔥 Multiple images (max 5 logic controller me)
+    images: [imageSchema],
   },
   { timestamps: true }
 );

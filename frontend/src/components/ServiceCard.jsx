@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export default function ServiceCard({ img, title, desc }) {
   return (
-    <div className="flex-shrink-0 rounded-lg overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300">
+    <div className="flex-shrink-0 rounded-lg overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300 w-80">
       {/* Large Rectangle Image */}
       <div className="w-full h-40">
         <img

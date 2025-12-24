@@ -16,7 +16,7 @@ export default function Hero() {
         {/* <-- Yaha Left Padding Lagaya */}
 
         {/* Main Heading */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight max-w-2xl">
+        <h1 className="text-4xl text-center md:text-6xl font-bold leading-tight max-w-2xl">
           Eat Right.<br />
           Live Bright.  
         </h1>
