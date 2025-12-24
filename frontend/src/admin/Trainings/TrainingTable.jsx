@@ -10,7 +10,7 @@ export default function TrainingTable({ setSelected, refreshKey }) {
         credentials: "include",
       });
       const data = await res.json();
-
+      console.log (data)
       // 🔥 convert images[] to base64 array
       const formatted = data.map((t) => ({
         ...t,
