@@ -17,13 +17,13 @@ exports.allTraining = async (req, res) => {
 exports.createTraining = async (req, res) => {
   try {
     const { title, subtitle, description } = req.body;
-
     const images = req.files
       ? req.files.map((file) => ({
           data: file.buffer,
           contentType: file.mimetype,
         }))
       : [];
+
 
     if (images.length > 5) {
       return res.status(400).json({ message: "Max 5 images allowed" });
@@ -41,7 +41,7 @@ exports.createTraining = async (req, res) => {
   } catch (err) {
     res.status(500).json({
       message: "Error creating training",
-      error: err.message,
+      error: err,
     });
   }
 };
