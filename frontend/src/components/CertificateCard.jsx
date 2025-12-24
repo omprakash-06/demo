@@ -1,6 +1,6 @@
 export default function CertificateCard({ img, size }) {
   return (
-    <div className="  flex items-center justify-center">
+    <div className="flex-shrink-0 rounded-lg overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300">
       <img
         src={img}
         alt="Certificates"

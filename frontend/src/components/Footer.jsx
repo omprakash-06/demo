@@ -58,9 +58,10 @@ export default function Footer() {
                 <i className="fa-brands fa-facebook !text-black"></i>
               </a>
 
-              <a href="#" className="text-2xl text-black hover:text-gray-700">
-                <i className="fa-brands fa-x-twitter"></i>
+              <a href="https://www.youtube.com/@drmeetamishra" className="text-2xl text-red-600 hover:text-red-500">
+              <i className="fa-brands fa-youtube !text-black"></i>
               </a>
+
             </div>
           </div>
 

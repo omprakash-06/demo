@@ -7,6 +7,15 @@ import Certificate1 from "../assets/certificate1.jpg";
 import Certificate2 from "../assets/certificate2.jpg";
 import Certificate3 from "../assets/certificate3.jpg";
 import Certificate4 from "../assets/certificate4.jpg";
+import Certificate5 from "../assets/certificate5.jpg";
+import Certificate6 from "../assets/certificate6.jpg";
+import Certificate7 from "../assets/certificate7.jpg";
+import Certificate8 from "../assets/certificate8.jpg";
+import Certificate9 from "../assets/certificate9.jpg";
+import Certificate10 from "../assets/certificate10.jpg";
+import Certificate11 from "../assets/certificate11.jpg";
+import Certificate12 from "../assets/certificate12.jpg";
+import Certificate13 from "../assets/certificate13.jpg";
 import dr from "../assets/dr.jpg"
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -110,7 +119,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
            Personalized Diet Plans & Nutrition Care 
           </h2>
-          <div className="flex flex-col md:flex-row gap-4 overflow-x-auto no-scrollbar">
+          <div className="flex gap-4 overflow-x-auto no-scrollbar">
             {services.length === 0 ? (
               <p>Loading services...</p>
             ) : (
@@ -139,7 +148,7 @@ export default function Home() {
             {trainings.length === 0 ? (
               <p>Loading trainings...</p>
             ) : (
-              trainings.slice(0, 3).map((t) => (
+              trainings.slice(0, 4).map((t) => (
                 <TrainingCard
                   key={t._id}
                   img={t.image}
@@ -191,11 +200,21 @@ export default function Home() {
             Recognitions & Achievements
           </h2>
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+         <div className="flex overflow-x-auto noscrollbar scroll-smooth gap-6">
            <CertificateCard img={Certificate1} size="w-64 h-64 transform rotate-270 rounded-lg" />
            <CertificateCard img={Certificate3} size="w-64 h-64 transform rotate-270 rounded-lg" />
            <CertificateCard img={Certificate2} size="w-64 h-64 rounded-lg" />
            <CertificateCard img={Certificate4} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate5} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate6} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate7} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate8} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate9} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate10} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate11} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate12} size="w-64 h-64 rounded-lg" />
+           <CertificateCard img={Certificate13} size="w-64 h-64 rounded-lg" />
+
          </div>
           
   

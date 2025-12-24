@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";  
-import bg from "../assets/bg.png";
+import bg from "../assets/bg.jpg";
 
 export default function Hero() {
   return (
     <section
-      className="relative w-full h-64 lg:80 md:h-80 bg-cover bg-center flex items-center"
-      style={{
-        backgroundImage: `url(${bg})`,
-      }}
-    >
+    className="relative w-full min-h-[60vh] md:min-h-[70vh] lg:min-h-[85vh] bg-cover bg-center flex items-center"
+    style={{ backgroundImage: `url(${bg})` }}
+  >
+  
       {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/50"></div>
 
