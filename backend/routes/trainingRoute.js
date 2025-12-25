@@ -7,8 +7,8 @@ const router = express.Router();
 
 // 🔥 image → images (max 5)
 router.get("/all", allTraining);
-router.post("/create",upload.array("images", 5),verifyAdmin,createTraining);
-router.put("/update/:id",upload.array("images",5),verifyAdmin,updateTraining);
+router.post("/create",verifyAdmin, upload.array("images", 5) ,createTraining);
+router.put("/update/:id",verifyAdmin, upload.array("images", 5),updateTraining);
 router.delete("/delete/:id", verifyAdmin, deleteTraining);
 
 module.exports = router;

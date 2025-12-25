@@ -111,27 +111,87 @@ export default function Navbar() {
         <ul className="md:hidden bg-white border-t text-gray-700 font-medium">
 
           <li className="px-6 py-3 border-b">
-            <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink>
+            <NavLink 
+              to="/" 
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "hover:text-green-600"
+              }
+            >
+              Home
+            </NavLink>
           </li>
 
           <li className="px-6 py-3 border-b">
-            <NavLink to="/about" onClick={() => setOpen(false)}>About</NavLink>
+            <NavLink 
+              to="/about" 
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "hover:text-green-600"
+              }
+            >
+              About
+            </NavLink>
           </li>
 
           <li className="px-6 py-3 border-b">
-            <NavLink to="/services" onClick={() => setOpen(false)}>Services</NavLink>
+            <NavLink 
+              to="/services" 
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "hover:text-green-600"
+              }
+            >
+              Services
+            </NavLink>
           </li>
 
           <li className="px-6 py-3 border-b">
-            <NavLink to="/training" onClick={() => setOpen(false)}>Training</NavLink>
+            <NavLink 
+              to="/training" 
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "hover:text-green-600"
+              }
+            >
+              Training
+            </NavLink>
           </li>
 
           <li className="px-6 py-3 border-b">
-            <NavLink to="/testimonials" onClick={() => setOpen(false)}>Client Story</NavLink>
+            <NavLink 
+              to="/testimonials" 
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "hover:text-green-600"
+              }
+            >
+              Client Story
+            </NavLink>
           </li>
 
           <li className="px-6 py-3">
-            <NavLink to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
+            <NavLink 
+              to="/contact" 
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-green-700 font-semibold"
+                  : "hover:text-green-600"
+              }
+            >
+              Contact
+            </NavLink>
           </li>
 
         </ul>
