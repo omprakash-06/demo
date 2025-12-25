@@ -37,7 +37,7 @@ function Training() {
   }, []);
 
   return (
-    <div className="w-full bg-[#f7faf7]">
+    <div className="w-full bg-green-200">
 <section
   className="relative py-20 px-6 md:px-20 text-center bg-center bg-cover bg-no-repeat"
   style={{

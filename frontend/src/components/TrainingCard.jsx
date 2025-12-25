@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function TrainingCard({ img, bg = "", title, subtitle }) {
   return (
-    <div className={`min-w-[250px] rounded-2xl overflow-hidden shadow-md ${bg}`}>
+    <div className={`min-w-[250px] rounded-2xl overflow-hidden bg-white shadow-md ${bg}`}>
       
       {/* Image */}
       <img

@@ -5,9 +5,6 @@ import TrainingCard from "../components/TrainingCard";
 import CertificateCard from "../components/CertificateCard";
 import Certificate1 from "../assets/certificate1.jpg";
 import Certificate2 from "../assets/certificate2.jpg";
-import Certificate3 from "../assets/certificate3.jpg";
-import Certificate4 from "../assets/certificate4.jpg";
-import Certificate5 from "../assets/certificate5.jpg";
 import Certificate6 from "../assets/certificate6.jpg";
 import Certificate7 from "../assets/certificate7.jpg";
 import Certificate8 from "../assets/certificate8.jpg";
@@ -143,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* TRAINING */}
-      <section className="py-14 bg-green-100">
+      <section className="py-14 bg-green-300">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
             Training & Wellness Sessions
@@ -206,10 +203,7 @@ export default function Home() {
 
          <div className="flex overflow-x-auto noscrollbar scroll-smooth gap-6">
            <CertificateCard img={Certificate1} size="w-64 h-64 transform rotate-270 rounded-lg" />
-           <CertificateCard img={Certificate3} size="w-64 h-64 transform rotate-270 rounded-lg" />
            <CertificateCard img={Certificate2} size="w-64 h-64 rounded-lg" />
-           <CertificateCard img={Certificate4} size="w-64 h-64 rounded-lg" />
-           <CertificateCard img={Certificate5} size="w-64 h-64 rounded-lg" />
            <CertificateCard img={Certificate6} size="w-64 h-64 rounded-lg" />
            <CertificateCard img={Certificate7} size="w-64 h-64 rounded-lg" />
            <CertificateCard img={Certificate8} size="w-64 h-64 rounded-lg" />
