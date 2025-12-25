@@ -4,11 +4,11 @@ import bg from "../assets/bg.jpg";
 export default function Hero() {
   return (
     <section
-      className="relative w-full min-h-[60vh] md:min-h-[70vh] lg:min-h-[85vh] flex items-center"
+      className="relative w-full h-[60vh] md:h-[70vh] lg:h-[85vh] flex items-center overflow-hidden"
     >
       {/* RESPONSIVE BACKGROUND IMAGE */}
       <div 
-        className="absolute inset-0 bg-cover bg-center md:bg-top lg:bg-center"
+        className="absolute inset-0"
         style={{ 
           backgroundImage: `url(${bg})`,
           backgroundSize: 'cover',
