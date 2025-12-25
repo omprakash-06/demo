@@ -11,7 +11,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <NavLink to="/" className="text-xl font-bold text-green-700">
-          <img src={logo} alt="logo" className="h-10 md:h-20" />
+          <img src={logo} alt="logo" className="h-20" />
         </NavLink>
 
         {/* Hamburger Icon */}

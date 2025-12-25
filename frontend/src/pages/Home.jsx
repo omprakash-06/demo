@@ -20,6 +20,7 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [services, setServices] = useState([]);
   const [trainings, setTrainings] = useState([]);
+  const [showFullAbout, setShowFullAbout] = useState(false);
 
   // Fetch services
   const fetchServices = async () => {
@@ -91,8 +92,9 @@ export default function Home() {
               Certified Dietitian & Clinical Nutritionist
             </h2>
 
+            {/* First Paragraph - Always visible */}
             <p className="text-gray-700 leading-relaxed text-lg">
-              <strong>Dr. Meeta Mishra </strong>is known as <strong>Raipur’s No.1</strong> and most trusted personalized diet planner,
+              <strong>Dr. Meeta Mishra </strong>is known as <strong>Raipur's No.1</strong> and most trusted personalized diet planner,
               helping people improve their health with practical and easy-to-follow nutrition guidance. 
               With more than <strong>17 years of experience</strong>, she has worked in clinical nutrition, lifestyle nutrition, 
               and sports nutrition. She holds an <strong> MSc in Food & Nutrition and a PhD in Nutrition</strong>,
@@ -101,15 +103,26 @@ export default function Home() {
               heart issues, obesity, and other health conditions through proper diet. She also worked for eight years as a sports nutrition consultant at Planet Gym, 
               creating diet plans that improved strength, stamina, and recovery for athletes and fitness enthusiasts.
             </p>
-            <br></br>
-          <p className="text-gray-700 leading-relaxed text-lg">
-              <strong>In 2017</strong>, <strong>Dr. Mishra started her own clinic at Vidya Protein World, Shankar Nagar, Raipur.</strong> 
-              Today, her clinic is a trusted centre for weight loss, lifestyle improvement, healthy eating routines, 
-              and overall wellness support. With more than  <strong>1,000</strong> happy clients, she is appreciated for her friendly approach, 
-              clear communication, and personalized diet plans that fit easily into daily life.
-              <strong> Dr. Meeta Mishra</strong> focuses on sustainable changes rather than quick fixes,
-              helping people achieve better health, more energy, and long-term results through balanced nutrition and simple lifestyle habits.
-            </p>
+
+            {/* Second Paragraph - Conditionally visible on mobile */}
+            <div className={`${showFullAbout ? 'block' : 'hidden'} md:block mt-6`}>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                <strong>In 2017</strong>, <strong>Dr. Mishra started her own clinic at Vidya Protein World, Shankar Nagar, Raipur.</strong> 
+                Today, her clinic is a trusted centre for weight loss, lifestyle improvement, healthy eating routines, 
+                and overall wellness support. With more than  <strong>1,000</strong> happy clients, she is appreciated for her friendly approach, 
+                clear communication, and personalized diet plans that fit easily into daily life.
+                <strong> Dr. Meeta Mishra</strong> focuses on sustainable changes rather than quick fixes,
+                helping people achieve better health, more energy, and long-term results through balanced nutrition and simple lifestyle habits.
+              </p>
+            </div>
+
+            {/* Read More Button - Only on mobile */}
+            <button 
+              onClick={() => setShowFullAbout(!showFullAbout)}
+              className="md:hidden mt-4 text-green-700 font-semibold hover:text-green-800 transition"
+            >
+              {showFullAbout ? "Show Less ↑" : "Read More →"}
+            </button>
           </div>
         </div>
       </section>
@@ -183,12 +196,12 @@ export default function Home() {
             <TestimonialCard
               name="Ravi jaiswal"
               img="R"
-              text="Dr. Meeta Mishra is very Humble & caring. Good human being as well as indepth knowledge of Nutrition."
+              text="Dr. Meeta Mishra is very Humble & caring. Good human being as well as indepth knowledge of Nutrition."
             />
             <TestimonialCard
               name="Monika Tiwari"
               img="M"
-              text="She is a superb dietician … she is humble as well as a genuine dietician to which I have come across ❤"
+              text="She is a superb dietician … she is humble as well as a genuine dietician to which I have come across ❤"
             />
           </div>
         </div>
