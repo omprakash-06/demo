@@ -75,7 +75,7 @@ export default function About() {
            </h2>
 
       <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium text-justify">
           “To transform lives by providing personalized, sustainable, and science-based 
           nutrition guidance that helps individuals achieve long-term health and wellness.”
         </p>
@@ -89,7 +89,7 @@ export default function About() {
       </h2>
 
       <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium text-justify">
           “To create a healthier community where every individual has the knowledge, support, 
           and motivation to lead a balanced and nourishing lifestyle.”
         </p>
@@ -140,7 +140,7 @@ export default function About() {
             Philosophy & Approach
           </h2>
 
-          <p className="text-gray-700 text-lg leading-relaxed mb-8">
+          <p className="text-gray-700 text-lg leading-relaxed mb-8 text-justify">
             Dr. Meeta believes that true health transformation comes from a deep
             understanding of each individual and creating sustainable, practical
             lifestyle habits.
