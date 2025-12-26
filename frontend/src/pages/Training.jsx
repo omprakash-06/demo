@@ -39,9 +39,9 @@ function Training() {
   }, []);
 
   return (
-    <div className="w-full bg-green-200">
+    <div className="  bg-green-200">
       <section
-        className="relative py-20 px-6 h-72 lg:h-128 md:h-96 text-center bg-center bg-cover bg-no-repeat"
+        className="relative py-20 px-6 h-72 lg:h-128 md:h-80 text-center bg-center bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${banner})`
         }}

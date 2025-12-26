@@ -34,11 +34,11 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <div className="bg-green-50 min-h-screen ">
+    <div className="bg-green-50 min-h-screen  ">
      <section
-             className="relative py-20 px-6 h-64 lg:h-128 md:h-96 text-center bg-center bg-cover bg-no-repeat"
+             className="relative h-36 md:h-40 lg:h-72 overflow-hidden bg-cover bg-no-repeat "
              style={{
-               backgroundImage: `url(${banner})`
+               backgroundImage: `url(${banner})`,
              }}
            >
   {/* Light overlay for readability */}
@@ -47,7 +47,7 @@ export default function Testimonials() {
 
   {/* Content */}
   <div className="relative z-10">
-    <h2 className="text-2xl md:text-5xl font-bold text-white mt-2 md:mt-24 mb-4">
+    <h2 className="text-2xl md:text-5xl font-bold text-white text-center mt-10 lg:mt-28 lg:mb-2">
       Client Story Gallery
     </h2>
 

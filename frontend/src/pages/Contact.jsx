@@ -37,11 +37,11 @@ export default function Contact() {
     <div className="w-full bg-[#f7faf7]">
 
       {/* HEADER / BANNER */}
-      <section className="relative w-full h-64 md:h-72 lg:h-128">
+      <section className="relative w-full h-36 md:h-40 lg:h-72 overflow-hidden">
         <img
           src={banner}
           alt="Contact Banner"
-          className="w-full h-full object-cover brightness-75"
+          className="w-full"
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-white text-2xl md:text-5xl font-bold tracking-wide">Contact Us</h1>
