@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import banner from "../assets/banner.jpg"
 export default function Contact() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -37,9 +37,9 @@ export default function Contact() {
     <div className="w-full bg-[#f7faf7]">
 
       {/* HEADER / BANNER */}
-      <section className="relative w-full h-64 md:h-72 lg:h-80">
+      <section className="relative w-full h-64 md:h-72 lg:h-128">
         <img
-          src="https://imgs.search.brave.com/9dlLhb2K7TmjAwD8SwD6dmRmU6jBrwFWhFllnUHgleA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjE2/MjY0NTMyOS9waG90/by90ZWFtd29yay1t/ZWV0aW5nLWFuZC1p/ZGVhcy1mb3Itc29s/dXRpb24tb3ItZGVj/aXNpb24tZm9yLWJ1/c2luZXNzLXdvcmtw/bGFjZS1vci1jb21w/YW55LWdyb3VwLndl/YnA_YT0xJmI9MSZz/PTYxMng2MTImdz0w/Jms9MjAmYz05d3lH/bXFna0VRWWNfM0ts/V2V5bWFhb1lqSnc3/UTdBLTR5NjZXdnZn/VzlBPQ"
+          src={banner}
           alt="Contact Banner"
           className="w-full h-full object-cover brightness-75"
         />

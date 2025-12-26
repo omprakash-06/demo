@@ -1,5 +1,6 @@
 import ServiceCard from "../components/ServicesCard";
 import { useState,useEffect } from "react";
+import banner from "../assets/banner.jpg"
 function Services() {
   const [services, setServices] = useState([]);
   
@@ -20,9 +21,9 @@ function Services() {
   return (
     <div className="w-full  bg-[#f5f9f5]">
             {/* HEADER BANNER */}
-      <section className="relative w-full h-36 md:h-40 lg:h-64 overflow-hidden">
+      <section className="relative w-full h-36 md:h-96 lg:h-128 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528"
+          src={banner}
           alt="Nutrition Banner"
           className="w-full h-full object-cover brightness-50"
         />

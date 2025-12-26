@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import banner from "../assets/banner.jpg"
 export default function Testimonials() {
   const [testimonials, setTestimonials] = useState([]);
   const [selected, setSelected] = useState(null); // selected testimonial object
@@ -35,18 +36,18 @@ export default function Testimonials() {
   return (
     <div className="bg-green-50 min-h-screen ">
      <section
-  className="relative py-8 px-6 md:px-20 text-center bg-center bg-cover bg-no-repeat"
-  style={{
-    backgroundImage: "url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528')"
-  }}
->
+             className="relative py-20 px-6 h-64 lg:h-128 md:h-96 text-center bg-center bg-cover bg-no-repeat"
+             style={{
+               backgroundImage: `url(${banner})`
+             }}
+           >
   {/* Light overlay for readability */}
   <div className="absolute inset-0 bg-black/70"></div>
 
 
   {/* Content */}
   <div className="relative z-10">
-    <h2 className="text-2xl md:text-5xl font-bold text-white mb-4">
+    <h2 className="text-2xl md:text-5xl font-bold text-white mt-2 md:mt-24 mb-4">
       Client Story Gallery
     </h2>
 

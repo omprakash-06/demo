@@ -93,7 +93,7 @@ export default function Home() {
             </h2>
 
             {/* First Paragraph - Always visible */}
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-lg text-justify">
               <strong>Dr. Meeta Mishra </strong>is known as <strong>Raipur's No.1</strong> and most trusted personalized diet planner,
               helping people improve their health with practical and easy-to-follow nutrition guidance. 
               With more than <strong>17 years of experience</strong>, she has worked in clinical nutrition, lifestyle nutrition, 
@@ -106,7 +106,7 @@ export default function Home() {
 
             {/* Second Paragraph - Conditionally visible on mobile */}
             <div className={`${showFullAbout ? 'block' : 'hidden'} md:block mt-6`}>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-gray-700 leading-relaxed text-lg text-justify">
                 <strong>In 2017</strong>, <strong>Dr. Mishra started her own clinic at Vidya Protein World, Shankar Nagar, Raipur.</strong> 
                 Today, her clinic is a trusted centre for weight loss, lifestyle improvement, healthy eating routines, 
                 and overall wellness support. With more than  <strong>1,000</strong> happy clients, she is appreciated for her friendly approach, 
