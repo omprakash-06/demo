@@ -39,31 +39,30 @@ function Training() {
   }, []);
 
   return (
-    <div className="  bg-green-200">
-      <section
-        className="relative py-20 px-6 h-72 lg:h-128 md:h-80 text-center bg-center bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: `url(${banner})`
-        }}
-      >
-        {/* Light overlay for readability */}
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        {/* Content */}
-        <div className="relative mt-8 md:mt-12 lg:mt-24">
-          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold  text-white mb-4">
+    <div className="bg-green-200">
+      {/* HEADER BANNER - Matching About & Testimonials Page Style */}
+      <section className="relative w-full h-36 md:h-40 lg:h-64 overflow-hidden">
+        <img
+          src={banner}
+          alt="Training Banner"
+          className="w-full object-cover brightness-50"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
+          <h1 className="text-white text-2xl md:text-5xl font-bold tracking-wide text-center drop-shadow-xl">
             Training & Workshop Programs
           </h1>
-
-          <p className="text-white max-w-2xl mx-auto leading-relaxed text-sm md:text-lg lg:text-xl">
+          <p className="text-white text-sm md:text-lg text-center mt-2 md:mt-4 max-w-2xl drop-shadow-lg">
             Showcase of all available nutrition training sessions conducted by{" "}
             <span className="font-semibold">Dr. Meeta Mishra</span>.
           </p>
-
-          <h1 className="text-xl md:text-2xl font-bold text-white md:mt-8">
-            Available Training Programs
-          </h1>
         </div>
+      </section>
+
+      {/* SECTION HEADING */}
+      <section className="py-10 px-6 text-center bg-green-100">
+        <h2 className="text-2xl md:text-3xl font-bold text-green-800">
+          Available Training Programs
+        </h2>
       </section>
 
       {/* TRAINING CARDS */}

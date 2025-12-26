@@ -21,7 +21,7 @@ function Services() {
   return (
     <div className="w-full  bg-[#f5f9f5]">
             {/* HEADER BANNER */}
-      <section className="relative w-full h-36 md:h-40 lg:h-72 overflow-hidden">
+      <section className="relative w-full h-36 md:h-40 lg:h-64 overflow-hidden">
         <img
           src={banner}
           alt="Nutrition Banner"
