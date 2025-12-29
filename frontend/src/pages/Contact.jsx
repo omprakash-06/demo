@@ -1,5 +1,6 @@
 import { useState } from "react";
 import banner from "../assets/banner.jpg"
+import office from "../assets/office.jpg"
 export default function Contact() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -60,7 +61,7 @@ export default function Contact() {
         {/* LEFT SIDE – IMAGE + CONTACT DETAILS */}
         <div className="space-y-6">
           <img
-            src="https://images.jdmagicbox.com/comp/raipur-chhattisgarh/n1/9999px771.x771.191031180907.c4n1/catalogue/dr-meeta-mishra-nutritionist--raipur-chhattisgarh-0dkujp6tud.jpg"
+            src={office}
             alt="Office"
             className="rounded-2xl shadow-md w-full object-cover"
           />
@@ -68,7 +69,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-green-700 mb-4">Contact Details</h3>
             <p className="text-gray-700 mb-3">📍 <strong>Address:</strong><br/>In Front of Indian Chilly, Vidya’s Protein World,<br/>Shankar Nagar, Raipur, Chhattisgarh</p>
             <p className="text-gray-700 mb-3">📞 <strong>Phone / WhatsApp:</strong><br/>8982627838, 9589345938</p>
-            <p className="text-gray-700 mb-3">✉️ <strong>Email:</strong><br/>meetadiet@gmail.com</p>
+        
           </div>
         </div>
 

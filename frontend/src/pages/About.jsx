@@ -1,6 +1,8 @@
 import Counter from "../components/Counter";
 import dr from "../assets/dr.jpg"
 import banner from "../assets/banner.jpg"
+import philosophyImg from "../assets/philosophy.jpg"
+
 export default function About() {
   return (
     <div className="w-full bg-green-100 text-gray-800">
@@ -76,8 +78,8 @@ export default function About() {
 
       <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
-          “To transform lives by providing personalized, sustainable, and science-based 
-          nutrition guidance that helps individuals achieve long-term health and wellness.”
+          "To transform lives by providing personalized, sustainable, and science-based 
+          nutrition guidance that helps individuals achieve long-term health and wellness."
         </p>
       </div>
     </div>
@@ -90,8 +92,8 @@ export default function About() {
 
       <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
-          “To create a healthier community where every individual has the knowledge, support, 
-          and motivation to lead a balanced and nourishing lifestyle.”
+          "To create a healthier community where every individual has the knowledge, support, 
+          and motivation to lead a balanced and nourishing lifestyle."
         </p>
       </div>
     </div>
@@ -117,7 +119,7 @@ export default function About() {
 
           <div className="bg-green-50 p-8 rounded-2xl shadow-sm border border-green-200 text-center hover:shadow-md transition">
             <h3 className="text-5xl font-bold text-green-700 mb-3">
-              <Counter end={17} />+
+              <Counter end={18} />+
             </h3>
             <p className="text-gray-700 font-medium">Years of Experience</p>
           </div>
@@ -132,78 +134,105 @@ export default function About() {
         </div>
       </section>
 
-      {/* PHILOSOPHY SECTION */}
+      {/* PHILOSOPHY SECTION - WITH IMAGE */}
       <section className="w-full bg-green-50 py-20 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
 
-          <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-green-700 mb-12 text-center md:text-left">
             Philosophy & Approach
           </h2>
 
-          <p className="text-gray-700 text-lg leading-relaxed mb-8">
-            Dr. Meeta believes that true health transformation comes from a deep
-            understanding of each individual and creating sustainable, practical
-            lifestyle habits.
-          </p>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* LEFT - TEXT CONTENT */}
+            <div>
+              <p className="text-gray-700 text-lg leading-relaxed mb-8 text-justify">
+                Dr. Meeta believes that true health transformation comes from a deep
+                understanding of each individual and creating sustainable, practical
+                lifestyle habits.
+              </p>
 
-          <ul className="space-y-5 text-gray-800 text-lg">
-            <li className="flex gap-3 items-start"><span className="text-green-600 text-2xl">•</span>Understanding individual lifestyle and habits</li>
-            <li className="flex gap-3 items-start"><span className="text-green-600 text-2xl">•</span>Creating sustainable, realistic diet plans</li>
-            <li className="flex gap-3 items-start"><span className="text-green-600 text-2xl">•</span>Focusing on long-term wellness over quick fixes</li>
-            <li className="flex gap-3 items-start"><span className="text-green-600 text-2xl">•</span>Integrating clinical knowledge with day-to-day nutrition</li>
-          </ul>
+              <ul className="space-y-5 text-gray-800 text-lg mb-8">
+                <li className="flex gap-3 items-start">
+                  <span className="text-green-600 text-2xl">•</span>
+                  Understanding individual lifestyle and habits
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-green-600 text-2xl">•</span>
+                  Creating sustainable, realistic diet plans
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-green-600 text-2xl">•</span>
+                  Focusing on long-term wellness over quick fixes
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-green-600 text-2xl">•</span>
+                  Integrating clinical knowledge with day-to-day nutrition
+                </li>
+              </ul>
 
-          <p className="text-gray-700 text-lg leading-relaxed mt-10">
-            Her personalized plans emphasize <span className="font-semibold">balance</span>, 
-            <span className="font-semibold">consistency</span>, and 
-            <span className="font-semibold">nourishment</span>.
-          </p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Her personalized plans emphasize <span className="font-semibold">balance</span>, 
+                <span className="font-semibold"> consistency</span>, and 
+                <span className="font-semibold"> nourishment</span>.
+              </p>
+            </div>
+
+            {/* RIGHT - IMAGE */}
+            <div className="flex justify-center items-center">
+              <img
+                src={philosophyImg}  // Replace with your philosophy image: philosophyImg
+                alt="Philosophy and Approach"
+                className="rounded-2xl shadow-xl w-full md:w-96 object-cover ring-4 ring-green-200"
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* SPECIALIZATION SECTION */}
-<section className="bg-green-100 py-20">
-  <div className="max-w-6xl mx-auto px-6">
+      <section className="bg-green-100 py-20">
+        <div className="max-w-6xl mx-auto px-6">
 
-    <h2 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-14 text-center tracking-tight">
-      Expertise & Specializations
-    </h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-green-800 mb-14 text-center tracking-tight">
+            Expertise & Specializations
+          </h2>
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      {[
-        { title: "Weight Management", icon: "⚖️" },
-        { title: "Diabetes, Thyroid, PCOD & Lifestyle Disorders", icon: "🩺" },
-        { title: "Clinical Nutrition Consulting", icon: "📋" },
-        { title: "Sports & Fitness Nutrition", icon: "💪" },
-        { title: "Pregnancy & Child Nutrition", icon: "🤰" },
-        { title: "Therapeutic Diet Planning", icon: "🥗" },
-      ].map((item, index) => (
-        <div 
-          key={index}
-          className="bg-white/70 backdrop-blur-md p-7 rounded-2xl shadow-sm border border-green-200 
-                     hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
-        >
-          {/* ICON */}
-          <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 
-                          group-hover:bg-green-200 transition text-2xl">
-            {item.icon}
+            {[
+              { title: "Weight Management", icon: "⚖️" },
+              { title: "Diabetes, Thyroid, PCOD & Lifestyle Disorders", icon: "🩺" },
+              { title: "Clinical Nutrition Consulting", icon: "📋" },
+              { title: "Sports & Fitness Nutrition", icon: "💪" },
+              { title: "Pregnancy & Child Nutrition", icon: "🤰" },
+              { title: "Therapeutic Diet Planning", icon: "🥗" },
+            ].map((item, index) => (
+              <div 
+                key={index}
+                className="bg-white/70 backdrop-blur-md p-7 rounded-2xl shadow-sm border border-green-200 
+                           hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+              >
+                {/* ICON */}
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 
+                                group-hover:bg-green-200 transition text-2xl">
+                  {item.icon}
+                </div>
+
+                {/* TITLE */}
+                <h3 className="font-semibold text-xl text-green-900 leading-snug">
+                  {item.title}
+                </h3>
+
+                {/* UNDERLINE */}
+                <div className="h-1 w-0 bg-green-600 mt-3 rounded-full group-hover:w-16 transition-all"></div>
+              </div>
+            ))}
+
           </div>
 
-          {/* TITLE */}
-          <h3 className="font-semibold text-xl text-green-900 leading-snug">
-            {item.title}
-          </h3>
-
-          {/* UNDERLINE */}
-          <div className="h-1 w-0 bg-green-600 mt-3 rounded-full group-hover:w-16 transition-all"></div>
         </div>
-      ))}
-
-    </div>
-
-  </div>
-</section>
+      </section>
       
 
     </div>
