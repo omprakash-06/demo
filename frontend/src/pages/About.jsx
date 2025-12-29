@@ -77,15 +77,9 @@ export default function About() {
            </h2>
 
       <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
-<<<<<<< HEAD
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
           "To transform lives by providing personalized, sustainable, and science-based 
           nutrition guidance that helps individuals achieve long-term health and wellness."
-=======
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium text-justify">
-          “To transform lives by providing personalized, sustainable, and science-based 
-          nutrition guidance that helps individuals achieve long-term health and wellness.”
->>>>>>> d81975be91f8b50a5ba0ae3b4d93040b90a41b2a
         </p>
       </div>
     </div>
@@ -97,15 +91,9 @@ export default function About() {
       </h2>
 
       <div className="bg-white border border-green-300 rounded-3xl shadow-xl p-10 md:p-12 relative">
-<<<<<<< HEAD
         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
           "To create a healthier community where every individual has the knowledge, support, 
           and motivation to lead a balanced and nourishing lifestyle."
-=======
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed font-medium text-justify">
-          “To create a healthier community where every individual has the knowledge, support, 
-          and motivation to lead a balanced and nourishing lifestyle.”
->>>>>>> d81975be91f8b50a5ba0ae3b4d93040b90a41b2a
         </p>
       </div>
     </div>
@@ -154,7 +142,6 @@ export default function About() {
             Philosophy & Approach
           </h2>
 
-<<<<<<< HEAD
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* LEFT - TEXT CONTENT */}
             <div>
@@ -163,13 +150,6 @@ export default function About() {
                 understanding of each individual and creating sustainable, practical
                 lifestyle habits.
               </p>
-=======
-          <p className="text-gray-700 text-lg leading-relaxed mb-8 text-justify">
-            Dr. Meeta believes that true health transformation comes from a deep
-            understanding of each individual and creating sustainable, practical
-            lifestyle habits.
-          </p>
->>>>>>> d81975be91f8b50a5ba0ae3b4d93040b90a41b2a
 
               <ul className="space-y-5 text-gray-800 text-lg mb-8">
                 <li className="flex gap-3 items-start">
