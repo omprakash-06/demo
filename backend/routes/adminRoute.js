@@ -12,5 +12,11 @@ router.get("/me", verifyAdmin, getAdminProfile);
 
 // logout
 router.post("/logout", logoutAdmin);
+//ping 
+
+app.get("/health", (req, res) => {
+  res.send("OK");
+});
+
 
 module.exports = router;
