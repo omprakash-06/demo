@@ -14,7 +14,7 @@ router.get("/me", verifyAdmin, getAdminProfile);
 router.post("/logout", logoutAdmin);
 //ping 
 
-app.get("/health", (req, res) => {
+router.get("/health", (req, res) => {
   res.send("OK");
 });
 
