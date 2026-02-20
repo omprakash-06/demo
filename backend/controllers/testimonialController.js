@@ -12,34 +12,15 @@ exports.allTestimonials = async (req, res) => {
     const testimonials = await Testimonial.find()
       .sort({ createdAt: -1 })
       .skip(skip)
-      .limit(limit);
+      .limit(limit)
+      .lean(); // 👈 VERY IMPORTANT
 
-    const formatted = testimonials.map((t) => {
-      let imageBase64 = null;
-
-      if (t.image && t.image.data) {
-        imageBase64 = `data:${t.image.contentType};base64,${t.image.data.toString("base64")}`;
-      }
-
-      return {
-        _id: t._id,
-        title: t.title,
-        description: t.description,
-        image: imageBase64,
-      };
-    });
-
-    res.status(200).json({
-      testimonials: formatted,
-      currentPage: page,
-      totalPages: Math.ceil(total / limit),
-    });
+    res.status(200).json(testimonials);
 
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
-
 //  Create
 exports.createTestimonial = async (req, res) => {
   try {
