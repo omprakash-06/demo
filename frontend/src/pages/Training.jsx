@@ -1,17 +1,24 @@
 import { useState, useEffect } from "react";
 import TrainingCard from "../components/TrainingCardV2";
-import Brand from "../components/BrandSlider"
-import banner from "../assets/banner.jpg"
+import Brand from "../components/BrandSlider";
+import banner from "../assets/banner.jpg";
 
 function Training() {
   const [trainings, setTrainings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const BACKEND = import.meta.env.VITE_BACKEND_URL;
 
   const fetchTrainings = async () => {
     try {
+      setLoading(true);
+      setError(null);
+
       const res = await fetch(`${BACKEND}/training/all`);
+      if (!res.ok) throw new Error("Failed to fetch trainings");
+
       const data = await res.json();
-  
+
       const trainingsWithImages = data.map((t) => ({
         ...t,
         images: t.images
@@ -26,13 +33,15 @@ function Training() {
             )
           : [],
       }));
-  
+
       setTrainings(trainingsWithImages);
     } catch (err) {
       console.error("Error fetching trainings:", err);
+      setError("some thing went wrong, try again.");
+    } finally {
+      setLoading(false);
     }
   };
-  
 
   useEffect(() => {
     fetchTrainings();
@@ -40,7 +49,7 @@ function Training() {
 
   return (
     <div className="bg-green-200">
-      {/* HEADER BANNER - Matching About & Testimonials Page Style */}
+      {/* HEADER BANNER */}
       <section className="relative w-full h-36 md:h-40 lg:h-64 overflow-hidden">
         <img
           src={banner}
@@ -67,9 +76,37 @@ function Training() {
 
       {/* TRAINING CARDS */}
       <section className="py-14 px-6 md:px-20 max-w-6xl mx-auto overflow-x-auto no-scrollbar">
-        {trainings.length === 0 ? (
-          <p className="text-center text-gray-500">No training programs available.</p>
-        ) : (
+
+        {/* Loading */}
+        {loading && (
+          <div className="flex flex-col items-center justify-center py-20 gap-4">
+            <div className="w-12 h-12 border-4 border-green-600 border-t-transparent rounded-full animate-spin" />
+            <p className="text-green-800 font-medium text-lg">Loading programs...</p>
+          </div>
+        )}
+
+        {/* Error */}
+        {!loading && error && (
+          <div className="flex flex-col items-center justify-center py-20 gap-3">
+            <p className="text-red-500 font-medium text-lg">{error}</p>
+            <button
+              onClick={fetchTrainings}
+              className="px-5 py-2 bg-green-700 text-white rounded-xl hover:bg-green-800 transition"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
+        {/* Empty */}
+        {!loading && !error && trainings.length === 0 && (
+          <p className="text-center text-gray-500">
+            No training programs available.
+          </p>
+        )}
+
+        {/* Cards */}
+        {!loading && !error && trainings.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {trainings.map((t) => (
               <TrainingCard
@@ -83,7 +120,8 @@ function Training() {
           </div>
         )}
       </section>
-      <Brand/>
+
+      <Brand />
     </div>
   );
 }

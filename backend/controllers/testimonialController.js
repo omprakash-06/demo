@@ -1,6 +1,7 @@
 const Testimonial = require("../models/testimonialModel");
 
 // Get all
+// Get all
 exports.allTestimonials = async (req, res) => {
   try {
     const page = parseInt(req.query.page) || 1;
@@ -13,10 +14,18 @@ exports.allTestimonials = async (req, res) => {
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit)
-      .lean(); // 👈 VERY IMPORTANT
+      .lean();
+    const formatted = testimonials.map((t) => ({
+      ...t,
+      image: t.image
+        ? {
+            contentType: t.image.contentType,
+            data: t.image.data.toString("base64"),
+          }
+        : null,
+    }));
 
-    res.status(200).json(testimonials);
-
+    res.status(200).json({ testimonials: formatted, total, page });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
