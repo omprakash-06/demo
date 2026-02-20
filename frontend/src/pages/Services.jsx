@@ -42,7 +42,7 @@ function Services() {
           </h3>
 
           <p className="text-gray-600 leading-relaxed text-2xl">
-            Explore personalized, science-backed nutrition programs designed to support your health goals.
+            Explore personalized, science-based nutrition programs designed to support your health goals.
           </p>
         </div>
       </section>

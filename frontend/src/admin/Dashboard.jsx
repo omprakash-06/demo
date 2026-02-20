@@ -4,7 +4,6 @@ import { useAuth } from "../context/AuthContext";
 export default function Dashboard() {
   const { user } = useAuth();
   const [counts, setCounts] = useState({
-    enquiries: 0,
     services: 0,
     trainings: 0,
     testimonials: 0
@@ -15,7 +14,6 @@ export default function Dashboard() {
     const fetchCounts = async () => {
       try {
         const [enqRes, serRes, trainRes, testRes] = await Promise.all([
-          fetch(`${BACKEND}/enquiry/all`, { credentials: "include" }),
           fetch(`${BACKEND}/service/all`, { credentials: "include" }),
           fetch(`${BACKEND}/training/all`, { credentials: "include" }),
           fetch(`${BACKEND}/testimonial/all`, { credentials: "include" }),
@@ -26,7 +24,6 @@ export default function Dashboard() {
         ]);
 
         setCounts({
-          enquiries: enqData.enquiries?.length || 0,
           services: serData.services?.length || 0,
           trainings: trainData.length || 0,
           testimonials: testData.length || 0

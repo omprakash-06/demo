@@ -12,7 +12,8 @@ import Certificate9 from "../assets/certificate9.jpg";
 import Certificate10 from "../assets/certificate10.jpg";
 import Certificate11 from "../assets/certificate11.jpg";
 import Certificate12 from "../assets/certificate12.jpg";
-import Certificate13 from "../assets/certificate13.jpg";
+import Certificate13 from "../assets/certificate13.jpeg";
+import Certificate14 from "../assets/certificate14.jpeg";
 import dr from "../assets/dr.jpg"
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -96,7 +97,7 @@ export default function Home() {
             <p className="text-gray-700 leading-relaxed text-lg text-justify">
               <strong>Dr. Meeta Mishra </strong>is known as <strong>Raipur's No.1</strong> and most trusted personalized diet planner,
               helping people improve their health with practical and easy-to-follow nutrition guidance. 
-              With more than <strong>17 years of experience</strong>, she has worked in clinical nutrition, lifestyle nutrition, 
+              With more than <strong>18 years of experience</strong>, she has worked in clinical nutrition, lifestyle nutrition, 
               and sports nutrition. She holds an <strong> MSc in Food & Nutrition and a PhD in Nutrition</strong>,
               giving her a strong understanding of how food supports overall health.
               <strong>Dr. Mishra</strong> spent eight years at <strong>Jubesta Hospital</strong>, where she helped patients manage diabetes, 
@@ -224,8 +225,8 @@ export default function Home() {
            <CertificateCard img={Certificate10} size="w-64 h-64 rounded-lg" />
            <CertificateCard img={Certificate11} size="w-64 h-64 rounded-lg" />
            <CertificateCard img={Certificate12} size="w-64 h-64 rounded-lg" />
-           <CertificateCard img={Certificate13} size="w-64 h-64 rounded-lg" />
-
+           <CertificateCard img={Certificate13} size="w-64 h-64 rounded-lg rotate-270" />
+           <CertificateCard img={Certificate14} size="w-64 h-64 rounded-lg " />
          </div>
           
   

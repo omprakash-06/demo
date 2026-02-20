@@ -16,14 +16,12 @@ app.use(cors({
  connectDB();
 
  const adminRoute = require("./routes/adminRoute");
- const enquiryRoute = require("./routes/enquiryRoute");
  const serviceRoute = require("./routes/serviceRoute");
  const trainingRoute = require("./routes/trainingRoute");
  const testimonialRoute = require("./routes/testimonialRoute");
  
  app.use(cookieParser());
  app.use("/api/admin", adminRoute);
- app.use("/api/enquiry", enquiryRoute);
  app.use("/api/service", serviceRoute);
  app.use("/api/training",trainingRoute);
  app.use("/api/testimonial", testimonialRoute); 

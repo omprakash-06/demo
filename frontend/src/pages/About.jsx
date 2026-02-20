@@ -46,7 +46,7 @@ export default function About() {
             <p className="text-gray-700 leading-relaxed text-lg text-justify">
               <strong>Dr. Meeta Mishra </strong>is known as <strong>Raipur's No.1</strong> and most trusted personalized diet planner,
               helping people improve their health with practical and easy-to-follow nutrition guidance. 
-              With more than <strong>17 years of experience</strong>, she has worked in clinical nutrition, lifestyle nutrition, 
+              With more than <strong>18 years of experience</strong>, she has worked in clinical nutrition, lifestyle nutrition, 
               and sports nutrition. She holds an <strong> MSc in Food & Nutrition and a PhD in Nutrition</strong>,
               giving her a strong understanding of how food supports overall health.
               <strong>Dr. Mishra</strong> spent eight years at <strong>Jubesta Hospital</strong>, where she helped patients manage diabetes, 
